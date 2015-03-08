@@ -34,6 +34,10 @@ class FbPost {
                     likers.append(NSString(string: id).integerValue)
                 }
             }
+            if let likesPaging = likes["paging"] as? [String: AnyObject] {
+                if let likesNext = likesPaging["next"] as? String {
+                }
+            }
         }
         return likers
     }

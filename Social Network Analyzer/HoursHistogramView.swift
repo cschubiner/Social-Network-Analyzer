@@ -15,6 +15,9 @@ class HoursHistogramView: UIView {
     var numRows: Int = 1 { didSet {setNeedsDisplay() } }
     
     override func drawRect(rect: CGRect) {
+        for subview in subviews {
+            subview.removeFromSuperview()
+        }
         if let data = data {
             let maxVal = data.reduce(0, { max($0, $1) })
             let numPerRow = data.count / numRows

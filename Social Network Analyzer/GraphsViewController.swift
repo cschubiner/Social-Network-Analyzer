@@ -27,8 +27,8 @@ class GraphsViewController: UIViewController {
                 postsByHour[hour] += 1
                 avgLikesPerHour[hour] = totalLikes / postsByHour[hour]
             }
-            self.postsByHourView.data = postsByHour
-            self.avgLikesView.data = avgLikesPerHour
+            self.postsByHourView?.data = postsByHour
+            self.avgLikesView?.data = avgLikesPerHour
         }
 
         // Do any additional setup after loading the view.

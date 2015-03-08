@@ -327,51 +327,120 @@
                         <viewControllerLayoutGuide type="top" id="Kh0-1o-FcH"/>
                         <viewControllerLayoutGuide type="bottom" id="aha-pp-BQE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="AyT-8j-Oeq">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <view key="view" contentMode="scaleToFill" id="eN3-Xd-f8L">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GLA-ad-zLE" customClass="HoursHistogramView" customModule="Social_Network_Analyzer" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="49" width="600" height="233"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Posts, by Hour" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZyL-eN-T9E">
-                                <rect key="frame" x="16" y="20" width="200.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sIo-zp-0qa" customClass="HoursHistogramView" customModule="Social_Network_Analyzer" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="318" width="600" height="233"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average likes per post, by hour of post" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ip3-ji-guq">
-                                <rect key="frame" x="16" y="289" width="296.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wZ-ne-QR6">
+                                <rect key="frame" x="16" y="20" width="568" height="931"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cGc-RA-Dvb">
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="507.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numer of posts, by hour" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeQ-HX-Tw1">
+                                                <rect key="frame" x="8" y="8" width="186.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ss9-dO-GB6" customClass="HoursHistogramView" customModule="Social_Network_Analyzer" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="36" width="568" height="200"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="200" id="gic-3h-mes"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9U-0Z-0du">
+                                                <rect key="frame" x="0.0" y="236" width="28.5" height="13.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average likes per post, by hour of post" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmd-nE-F5o">
+                                                <rect key="frame" x="0.0" y="257" width="296.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMQ-Tj-khn" customClass="HoursHistogramView" customModule="Social_Network_Analyzer" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="286" width="568" height="200"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12pm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PqA-4x-YUq">
+                                                <rect key="frame" x="270" y="236" width="29.5" height="13.5"/>
+                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Q9U-0Z-0du" firstAttribute="leading" secondItem="cGc-RA-Dvb" secondAttribute="leading" id="3SR-Yv-KEQ"/>
+                                            <constraint firstItem="CMQ-Tj-khn" firstAttribute="leading" secondItem="cGc-RA-Dvb" secondAttribute="leading" id="4hA-oM-VBE"/>
+                                            <constraint firstItem="Ss9-dO-GB6" firstAttribute="leading" secondItem="cGc-RA-Dvb" secondAttribute="leading" id="5eZ-FB-Xm4"/>
+                                            <constraint firstItem="hmd-nE-F5o" firstAttribute="top" secondItem="Ss9-dO-GB6" secondAttribute="bottom" constant="8" id="5vX-FA-TAF"/>
+                                            <constraint firstItem="PqA-4x-YUq" firstAttribute="baseline" secondItem="Q9U-0Z-0du" secondAttribute="baseline" id="94e-If-m22"/>
+                                            <constraint firstItem="Q9U-0Z-0du" firstAttribute="top" secondItem="Ss9-dO-GB6" secondAttribute="bottom" id="9xh-MU-FMd"/>
+                                            <constraint firstAttribute="bottom" secondItem="CMQ-Tj-khn" secondAttribute="bottom" constant="8" id="F4M-EH-yno"/>
+                                            <constraint firstItem="hmd-nE-F5o" firstAttribute="leading" secondItem="cGc-RA-Dvb" secondAttribute="leading" id="HTG-TG-sis"/>
+                                            <constraint firstAttribute="trailing" secondItem="CMQ-Tj-khn" secondAttribute="trailing" id="KPT-W7-026"/>
+                                            <constraint firstItem="Ss9-dO-GB6" firstAttribute="top" secondItem="eeQ-HX-Tw1" secondAttribute="bottom" constant="8" id="QIO-f0-xoD"/>
+                                            <constraint firstItem="CMQ-Tj-khn" firstAttribute="height" secondItem="Ss9-dO-GB6" secondAttribute="height" id="R70-xF-fy2"/>
+                                            <constraint firstItem="eeQ-HX-Tw1" firstAttribute="leading" secondItem="cGc-RA-Dvb" secondAttribute="leading" constant="8" id="WVv-FM-iVT"/>
+                                            <constraint firstItem="hmd-nE-F5o" firstAttribute="top" secondItem="Q9U-0Z-0du" secondAttribute="bottom" constant="8" id="byo-cv-sEa"/>
+                                            <constraint firstAttribute="trailing" secondItem="Ss9-dO-GB6" secondAttribute="trailing" id="icj-8R-AzV"/>
+                                            <constraint firstItem="CMQ-Tj-khn" firstAttribute="top" secondItem="hmd-nE-F5o" secondAttribute="bottom" constant="8" id="nad-BB-5lX"/>
+                                            <constraint firstItem="eeQ-HX-Tw1" firstAttribute="top" secondItem="cGc-RA-Dvb" secondAttribute="top" constant="8" id="rbm-jk-7sw"/>
+                                            <constraint firstItem="PqA-4x-YUq" firstAttribute="centerX" secondItem="Ss9-dO-GB6" secondAttribute="centerX" constant="1" id="xjA-38-eb9"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="5vX-FA-TAF"/>
+                                                <exclude reference="F4M-EH-yno"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12pm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="an0-FD-GWw">
+                                        <rect key="frame" x="269" y="486" width="29.5" height="13.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23h-f3-eHB">
+                                        <rect key="frame" x="0.0" y="486" width="28.5" height="13.5"/>
+                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="cGc-RA-Dvb" secondAttribute="trailing" id="Om3-IH-Nrq"/>
+                                    <constraint firstItem="23h-f3-eHB" firstAttribute="leading" secondItem="6wZ-ne-QR6" secondAttribute="leading" id="Q3G-zj-7V8"/>
+                                    <constraint firstItem="cGc-RA-Dvb" firstAttribute="leading" secondItem="6wZ-ne-QR6" secondAttribute="leading" id="TLM-hC-ri3"/>
+                                    <constraint firstAttribute="bottom" secondItem="cGc-RA-Dvb" secondAttribute="bottom" id="ie9-UQ-YNK"/>
+                                    <constraint firstItem="CMQ-Tj-khn" firstAttribute="centerX" secondItem="an0-FD-GWw" secondAttribute="centerX" id="lxR-El-p3c"/>
+                                    <constraint firstItem="cGc-RA-Dvb" firstAttribute="width" secondItem="6wZ-ne-QR6" secondAttribute="width" id="qHa-Pm-L1v"/>
+                                    <constraint firstItem="23h-f3-eHB" firstAttribute="baseline" secondItem="an0-FD-GWw" secondAttribute="baseline" id="u6f-6e-uzj"/>
+                                    <constraint firstItem="cGc-RA-Dvb" firstAttribute="bottom" secondItem="23h-f3-eHB" secondAttribute="bottom" constant="8" id="ze8-8Y-fX2"/>
+                                    <constraint firstItem="23h-f3-eHB" firstAttribute="top" secondItem="CMQ-Tj-khn" secondAttribute="bottom" id="zeZ-B0-AMx"/>
+                                    <constraint firstItem="cGc-RA-Dvb" firstAttribute="top" secondItem="6wZ-ne-QR6" secondAttribute="top" id="zwG-Ch-mVK"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="Ip3-ji-guq" firstAttribute="leading" secondItem="AyT-8j-Oeq" secondAttribute="leadingMargin" id="HYN-oT-Ln7"/>
-                            <constraint firstItem="sIo-zp-0qa" firstAttribute="top" secondItem="Ip3-ji-guq" secondAttribute="bottom" constant="8" id="Jc8-Rj-tjx"/>
-                            <constraint firstItem="Ip3-ji-guq" firstAttribute="top" secondItem="GLA-ad-zLE" secondAttribute="bottom" constant="7.5" id="KwR-jZ-HdB"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="sIo-zp-0qa" secondAttribute="trailing" constant="-16" id="Pkw-7A-rAZ"/>
-                            <constraint firstItem="sIo-zp-0qa" firstAttribute="leading" secondItem="AyT-8j-Oeq" secondAttribute="leadingMargin" constant="-16" id="Y6w-G3-oMk"/>
-                            <constraint firstItem="ZyL-eN-T9E" firstAttribute="top" secondItem="Kh0-1o-FcH" secondAttribute="bottom" id="ZIm-9X-4dU"/>
-                            <constraint firstItem="sIo-zp-0qa" firstAttribute="height" secondItem="GLA-ad-zLE" secondAttribute="height" id="gY5-ZC-SFE"/>
-                            <constraint firstItem="GLA-ad-zLE" firstAttribute="leading" secondItem="AyT-8j-Oeq" secondAttribute="leadingMargin" constant="-16" id="s8f-ad-7Nh"/>
-                            <constraint firstItem="GLA-ad-zLE" firstAttribute="top" secondItem="ZyL-eN-T9E" secondAttribute="bottom" constant="8" id="tL4-dd-eaV"/>
-                            <constraint firstItem="ZyL-eN-T9E" firstAttribute="leading" secondItem="AyT-8j-Oeq" secondAttribute="leadingMargin" id="xiD-gI-hKb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="GLA-ad-zLE" secondAttribute="trailing" constant="-16" id="y87-cD-0M0"/>
-                            <constraint firstItem="aha-pp-BQE" firstAttribute="top" secondItem="sIo-zp-0qa" secondAttribute="bottom" id="zUl-fs-plw"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6wZ-ne-QR6" secondAttribute="trailing" id="ADk-5i-C7G"/>
+                            <constraint firstItem="6wZ-ne-QR6" firstAttribute="top" secondItem="Kh0-1o-FcH" secondAttribute="bottom" id="KQS-DZ-KCK"/>
+                            <constraint firstItem="6wZ-ne-QR6" firstAttribute="leading" secondItem="eN3-Xd-f8L" secondAttribute="leadingMargin" id="ayg-QW-7z3"/>
+                            <constraint firstItem="aha-pp-BQE" firstAttribute="top" secondItem="6wZ-ne-QR6" secondAttribute="bottom" id="vb9-4V-ZJQ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Graphs" image="second" id="fve-8Z-Ir3"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="1000"/>
                     <connections>
-                        <outlet property="avgLikesView" destination="sIo-zp-0qa" id="DyT-2p-Gse"/>
-                        <outlet property="postsByHourView" destination="GLA-ad-zLE" id="mN3-Fx-gAQ"/>
+                        <outlet property="avgLikesView" destination="CMQ-Tj-khn" id="wC2-su-rpr"/>
+                        <outlet property="postsByHourView" destination="Ss9-dO-GB6" id="xHD-Fr-Stl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="woo-Io-L8v" sceneMemberID="firstResponder"/>
