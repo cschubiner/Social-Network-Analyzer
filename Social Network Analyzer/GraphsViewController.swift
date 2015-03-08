@@ -9,9 +9,16 @@
 import UIKit
 
 class GraphsViewController: UIViewController {
+    @IBOutlet weak var bestTime: HoursHistogramView!
+    @IBOutlet weak var timeAfter: HoursHistogramView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        FbHelper.getAllPosts() { posts in
+            for post in posts {
+                println("\(post.numLikes): \(post.text)")
+            }
+        }
 
         // Do any additional setup after loading the view.
     }

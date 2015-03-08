@@ -86,12 +86,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sce-Uc-J4W">
-                                <rect key="frame" x="0.0" y="20" width="600" height="257.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zY0-l7-CTA" customClass="HoursHistogramView" customModule="Social_Network_Analyzer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="285.5" width="600" height="257.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zY0-l7-CTA">
-                                <rect key="frame" x="0.0" y="285.5" width="600" height="257.5"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sce-Uc-J4W" customClass="HoursHistogramView" customModule="Social_Network_Analyzer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="600" height="257.5"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -108,6 +108,10 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Graphs" image="second" id="cPa-gy-q4n"/>
+                    <connections>
+                        <outlet property="bestTime" destination="sce-Uc-J4W" id="FI9-Va-aCM"/>
+                        <outlet property="timeAfter" destination="zY0-l7-CTA" id="BUL-B2-Bpb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
