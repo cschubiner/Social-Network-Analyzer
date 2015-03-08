@@ -14,8 +14,8 @@
 		0C364F701AAC2E5A0090E482 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C364F6F1AAC2E5A0090E482 /* Images.xcassets */; };
 		0C364F731AAC2E5A0090E482 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C364F711AAC2E5A0090E482 /* LaunchScreen.xib */; };
 		0C364F7F1AAC2E5A0090E482 /* Social_Network_AnalyzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C364F7E1AAC2E5A0090E482 /* Social_Network_AnalyzerTests.swift */; };
+		0CBD1DF61AAC309500465492 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9CA6EA51AAC2FDB004BB817 /* FacebookSDK.framework */; };
 		E9CA6EA41AAC2FC4004BB817 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CA6EA31AAC2FC4004BB817 /* LoadingViewController.swift */; };
-		E9CA6EA61AAC2FDB004BB817 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9CA6EA51AAC2FDB004BB817 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,7 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9CA6EA61AAC2FDB004BB817 /* FacebookSDK.framework in Frameworks */,
+				0CBD1DF61AAC309500465492 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +358,9 @@
 					"$(PROJECT_DIR)/Social",
 					Network,
 					Analyzer,
+					"$(PROJECT_DIR)/Social",
+					Network,
+					Analyzer,
 				);
 				INFOPLIST_FILE = "Social Network Analyzer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -374,6 +377,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Social",
+					Network,
+					Analyzer,
 					"$(PROJECT_DIR)/Social",
 					Network,
 					Analyzer,
