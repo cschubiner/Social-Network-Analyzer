@@ -9,32 +9,19 @@
 import UIKit
 
 class LoadingViewController: UIViewController {
+    @IBOutlet weak var activity: UIActivityIndicatorView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        activity.startAnimating()
         FBSession.openActiveSessionWithReadPermissions(["public_profile, user_photos, read_stream"], allowLoginUI: true, completionHandler: { session, state, error in
-            println(session)
-            println(state)
-            println(error)
+            println("permissions: \(FBSession.activeSession().accessTokenData.permissions)")
+            dispatch_async(dispatch_get_main_queue()) {
+                self.performSegueWithIdentifier("success", sender: nil)
+            }
+            
         })
 
         // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
