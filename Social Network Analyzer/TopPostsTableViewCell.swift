@@ -22,11 +22,7 @@ class TopPostsTableViewCell: UITableViewCell {
         }
     }
     
-    /*var IGPost : InstagramMedia? {
-        didSet {
-            updateUI()
-        }
-    }*/
+    var photoDictionary = [NSURL: UIImage]()
     
     func updateUI() {
         // reset existing post data
@@ -50,7 +46,11 @@ class TopPostsTableViewCell: UITableViewCell {
             likeNumLabel.text = "\(post.numLikes)"
             
             if let url = post.pictureURL {
-                fetchImage(url)
+                if let image = photoDictionary[url] {
+                    self.photoView?.image = image
+                } else {
+                    fetchImage(url)
+                }
             }
         } else if let post = post as? InstagramMedia {
             if post.caption != nil {
@@ -60,7 +60,11 @@ class TopPostsTableViewCell: UITableViewCell {
             likeNumLabel.text = "\(post.likesCount)"
             
             if let url = post.standardResolutionImageURL {
-                fetchImage(url)
+                if let image = photoDictionary[url] {
+                    self.photoView?.image = image
+                } else {
+                    fetchImage(url)
+                }
             }
             
         }
@@ -83,7 +87,9 @@ class TopPostsTableViewCell: UITableViewCell {
                     // which it might be if someone hit the Back button
                     // or otherwise removed us from split view or navigation controller
                     // while we were off fetching the image
-                    self.photoView?.image = UIImage(data: imageData!)
+                    let image = UIImage(data: imageData!)
+                    self.photoView?.image = image
+                    self.photoDictionary[imageURL] = image
                 } else {
                     self.photoView?.image = nil
                 }

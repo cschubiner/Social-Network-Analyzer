@@ -48,7 +48,8 @@ class TopPostsViewController: UITableViewController {
     
     private func findAllIGData(allPosts: [InstagramMedia]) {
         topIGPosts = [InstagramMedia]()
-        let sortedPosts = allPosts.sorted { $1.likesCount < $0.likesCount }
+        var sortedPosts = allPosts
+        sortedPosts.sort { $1.likesCount < $0.likesCount }
         if sortedPosts.count < NUM_TOP_POSTS {
             topIGPosts = sortedPosts
         } else {
@@ -58,14 +59,19 @@ class TopPostsViewController: UITableViewController {
     }
     
     private func findAllFBData(allPosts: [FbPost]) {
-        topFBPosts = [FbPost]()
-        let sortedPosts = FbHelper.allPosts.sorted { $1.numLikes < $0.numLikes }
-        if sortedPosts.count < NUM_TOP_POSTS {
-            topFBPosts = sortedPosts
-        } else {
-            topFBPosts = Array(sortedPosts[0...NUM_TOP_POSTS])
-        }
-        self.tableView.reloadData()
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), { ()->() in
+
+            var sortedPosts = self.topFBPosts + allPosts
+            sortedPosts.sort { $1.numLikes < $0.numLikes }
+            if sortedPosts.count < self.NUM_TOP_POSTS {
+                self.topFBPosts = sortedPosts
+            } else {
+                self.topFBPosts = Array(sortedPosts[0...self.NUM_TOP_POSTS])
+            }
+            dispatch_async(dispatch_get_main_queue(), {
+                self.tableView.reloadData()
+            })
+        })
     }
     
     private struct Storyboard {
