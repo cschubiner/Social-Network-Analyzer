@@ -17,7 +17,7 @@ class TopPostsViewController: UITableViewController {
     let NUM_TOP_POSTS = 10
     @IBOutlet weak var socialNetworkControl: UISegmentedControl!
     
-    var socialNetwork: String = "FB" {
+    var socialNetwork: String = "IG" {
         didSet {
             self.tableView.reloadData()
         }
@@ -83,9 +83,9 @@ class TopPostsViewController: UITableViewController {
     @IBAction func toggledSocialNetwork(sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            socialNetwork = "FB"
-        case 1:
             socialNetwork = "IG"
+        case 1:
+            socialNetwork = "FB"
         default:
             break
         }
@@ -99,10 +99,10 @@ class TopPostsViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if socialNetwork == "FB" {
-            return topFBPosts.count
-        } else if socialNetwork == "IG" {
+        if socialNetwork == "IG" {
             return topIGPosts.count
+        } else if socialNetwork == "FB" {
+            return topFBPosts.count
         }
         return 1
     }

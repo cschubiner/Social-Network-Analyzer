@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fUZ-2b-0Re">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fUZ-2b-0Re">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -107,11 +107,11 @@
                     <navigationItem key="navigationItem" title="Top Posts" id="eHd-Ec-XW8">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="5UD-IN-ayh">
                             <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="5ni-pt-hJg">
-                                <rect key="frame" x="435" y="7" width="100" height="30"/>
+                                <rect key="frame" x="484" y="7" width="101" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="FB" width="50"/>
                                     <segment title="IG" width="50"/>
+                                    <segment title="FB" width="50"/>
                                 </segments>
                                 <connections>
                                     <action selector="toggledSocialNetwork:" destination="clw-ML-HKn" eventType="valueChanged" id="F3E-Hf-H3b"/>
@@ -272,9 +272,9 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
+                        <segue destination="VoV-sw-ovA" kind="relationship" relationship="viewControllers" id="AA3-yK-auz"/>
                         <segue destination="S2j-xL-DrX" kind="relationship" relationship="viewControllers" id="Qyf-E5-Hqo"/>
                         <segue destination="GMY-Nx-Zdd" kind="relationship" relationship="viewControllers" id="EgS-iE-F8Y"/>
-                        <segue destination="VoV-sw-ovA" kind="relationship" relationship="viewControllers" id="AA3-yK-auz"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
@@ -285,7 +285,7 @@
         <scene sceneID="l7g-2B-f7N">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="VoV-sw-ovA" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Top Posts" id="WoC-oJ-Wm0"/>
+                    <tabBarItem key="tabBarItem" title="Top Posts" image="crown" id="WoC-oJ-Wm0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="9q8-Gh-j73">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -304,7 +304,7 @@
         <scene sceneID="IYP-uw-ufI">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GMY-Nx-Zdd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="People" id="xZP-8S-hjS"/>
+                    <tabBarItem key="tabBarItem" title="People" image="people" id="xZP-8S-hjS"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="eA3-Sx-3w5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -323,7 +323,7 @@
         <scene sceneID="oUA-Al-Q6r">
             <objects>
                 <navigationController id="S2j-xL-DrX" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Graphs" id="Bd5-Ns-jYs"/>
+                    <tabBarItem key="tabBarItem" title="Graphs" image="graph" id="Bd5-Ns-jYs"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Psg-ge-3Ge">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -467,6 +467,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="crown" width="30" height="30"/>
+        <image name="graph" width="30" height="30"/>
+        <image name="people" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
 </document>
