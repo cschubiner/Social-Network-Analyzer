@@ -8,24 +8,20 @@
 
 import UIKit
 
-class TopFBPost {
-    var postText: String
-    var datePosted: String
-    var numLikes: Int
-    
-    init(postText: String, datePosted: String, numLikes: Int) {
-        self.postText = postText
-        self.datePosted = datePosted
-        self.numLikes = numLikes
-    }
-}
-
 class TopPostsViewController: UITableViewController {
 
     // MARK: - Public API
     
     var topFBPosts = [FbPost]()
+    var topIGPosts = [InstagramMedia]()
     let NUM_TOP_POSTS = 10
+    @IBOutlet weak var socialNetworkControl: UISegmentedControl!
+    
+    var socialNetwork: String = "FB" {
+        didSet {
+            findAllData()
+        }
+    }
     
     // MARK: - ViewController Lifecycle
     
@@ -34,10 +30,29 @@ class TopPostsViewController: UITableViewController {
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        FbHelper.getAllPosts(findAllData)
+        findAllData()
     }
     
-    private func findAllData(allPosts: [FbPost]) {
+    private func findAllData() {
+        if socialNetwork == "FB" {
+            FbHelper.getAllPosts(findAllFBData)
+        } else if socialNetwork == "IG" {
+            InstagramHelper.getAllPosts(findAllIGData)
+        }
+    }
+    
+    private func findAllIGData(allPosts: [InstagramMedia]) {
+        topIGPosts = [InstagramMedia]()
+        let sortedPosts = allPosts.sorted { $1.likesCount < $0.likesCount }
+        if sortedPosts.count < NUM_TOP_POSTS {
+            topIGPosts = sortedPosts
+        } else {
+            topIGPosts = Array(sortedPosts[0...NUM_TOP_POSTS])
+        }
+        self.tableView.reloadData()
+    }
+    
+    private func findAllFBData(allPosts: [FbPost]) {
         topFBPosts = [FbPost]()
         let sortedPosts = allPosts.sorted { $1.numLikes < $0.numLikes }
         if sortedPosts.count < NUM_TOP_POSTS {
@@ -51,6 +66,20 @@ class TopPostsViewController: UITableViewController {
     private struct Storyboard {
         static let FBCellReuseIdentifier = "fbPost"
     }
+    
+    // MARK: - Toggle data source
+    
+    @IBAction func toggledSocialNetwork(sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            socialNetwork = "FB"
+        case 1:
+            socialNetwork = "IG"
+        default:
+            break
+        }
+    }
+    
     
     // MARK: - UITableViewDataSource
     
@@ -66,8 +95,13 @@ class TopPostsViewController: UITableViewController {
     {
         let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.FBCellReuseIdentifier, forIndexPath: indexPath) as TopPostsTableViewCell
         
-        cell.post = topFBPosts[indexPath.row]
+        if socialNetwork == "FB" {
+            cell.post = topFBPosts[indexPath.row]
+        } else if socialNetwork == "IG" {
+            cell.IGPost = topIGPosts[indexPath.row]
+        }
         
         return cell
     }
+    
 }

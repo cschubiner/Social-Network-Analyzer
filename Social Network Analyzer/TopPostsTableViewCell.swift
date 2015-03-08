@@ -13,11 +13,16 @@ class TopPostsTableViewCell: UITableViewCell {
     @IBOutlet weak var postTextLabel: UILabel!
     @IBOutlet weak var dateTextLabel: UILabel!
     @IBOutlet weak var likeNumLabel: UILabel!
-    @IBOutlet weak var photoView: UIView!
-    @IBOutlet weak var fbPhotoView: UIImageView!
+    @IBOutlet weak var photoView: UIImageView!
     
     
     var post : FbPost? {
+        didSet {
+            updateUI()
+        }
+    }
+    
+    var IGPost : InstagramMedia? {
         didSet {
             updateUI()
         }
@@ -28,7 +33,11 @@ class TopPostsTableViewCell: UITableViewCell {
         postTextLabel?.text = nil
         dateTextLabel?.text = nil
         likeNumLabel?.text = nil
-        fbPhotoView?.image = nil
+        photoView?.image = nil
+        
+        var dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = .FullStyle
+        dateFormatter.timeStyle = .ShortStyle
         
         if let post = post {
             if post.text != nil {
@@ -37,16 +46,23 @@ class TopPostsTableViewCell: UITableViewCell {
                 println(post.caption)
                 postTextLabel.text = post.caption
             }
-            
-            var dateFormatter = NSDateFormatter()
-            dateFormatter.dateStyle = .FullStyle
-            dateFormatter.timeStyle = .ShortStyle
             dateTextLabel.text = dateFormatter.stringFromDate(post.creationTime)
             likeNumLabel.text = "\(post.numLikes)"
             
             if let url = post.pictureURL {
                 fetchImage(url)
             }
+        } else if let post = IGPost {
+            if post.caption != nil {
+                postTextLabel.text = post.caption.text
+            }
+            dateTextLabel.text = dateFormatter.stringFromDate(post.createdDate)
+            likeNumLabel.text = "\(post.likesCount)"
+            
+            if let url = post.standardResolutionImageURL {
+                fetchImage(url)
+            }
+            
         }
     }
     
@@ -67,9 +83,9 @@ class TopPostsTableViewCell: UITableViewCell {
                     // which it might be if someone hit the Back button
                     // or otherwise removed us from split view or navigation controller
                     // while we were off fetching the image
-                    self.fbPhotoView?.image = UIImage(data: imageData!)
+                    self.photoView?.image = UIImage(data: imageData!)
                 } else {
-                    self.fbPhotoView?.image = nil
+                    self.photoView?.image = nil
                 }
             }
         }
