@@ -81,8 +81,11 @@ class PeopleTableViewController: UITableViewController {
         })
         
         fbHook = FbHelper.registerCallback() { posts in
+            var likersTotal = 0
+            var likersAdded = 0
             for post : FbPost in posts {
                 for likerID : Int in post.likers {
+                    likersTotal += 1
                     FbHelper.facebookIDToName(likerID, callback: { name in
                         let userName = name
                         if (self.facebookLikersDict[userName] == nil) {
@@ -92,14 +95,18 @@ class PeopleTableViewController: UITableViewController {
                             self.facebookLikersDict[userName] = pl
                         }
                         self.facebookLikersDict[userName]?.numLikes += 1
+                        likersAdded += 1
+                        
+                        if (likersAdded >= likersTotal - 4) {
+                            self.facebookLikers = [PostLiker](self.facebookLikersDict.values)
+                            self.facebookLikers.sort({$0.numLikes > $1.numLikes})
+                            dispatch_async(dispatch_get_main_queue(), {
+                                self.tableView.reloadData()
+                            })
+                        }
                     })
                 }
             }
-            self.facebookLikers = [PostLiker](self.facebookLikersDict.values)
-            self.facebookLikers.sort({$0.numLikes > $1.numLikes})
-            dispatch_async(dispatch_get_main_queue(), {
-                self.tableView.reloadData()
-            })
         }
     }
     
