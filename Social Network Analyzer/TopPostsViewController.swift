@@ -24,7 +24,8 @@ class TopPostsViewController: UITableViewController {
 
     // MARK: - Public API
     
-    var topFBPosts = [TopFBPost]()
+    var topFBPosts = [FbPost]()
+    let NUM_TOP_POSTS = 10
     
     // MARK: - ViewController Lifecycle
     
@@ -33,12 +34,17 @@ class TopPostsViewController: UITableViewController {
         tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
         
-        findAllData()
+        FbHelper.getAllPosts(findAllData)
     }
     
-    private func findAllData() {
-        let fakePost = TopFBPost(postText: "Hello There", datePosted: "December 7, 2012", numLikes: 20000)
-        topFBPosts.append(fakePost)
+    private func findAllData(allPosts: [FbPost]) {
+        let sortedPosts = allPosts.sorted { $1.numLikes < $0.numLikes }
+        if sortedPosts.count < NUM_TOP_POSTS {
+            topFBPosts = sortedPosts
+        } else {
+            topFBPosts = Array(sortedPosts[0...NUM_TOP_POSTS])
+        }
+        self.tableView.reloadData()
     }
     
     private struct Storyboard {

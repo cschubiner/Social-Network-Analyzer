@@ -16,17 +16,25 @@ class TopPostsTableViewCell: UITableViewCell {
     @IBOutlet weak var photoView: UIView!
     
     
-    var post : TopFBPost? {
+    var post : FbPost? {
         didSet {
             updateUI()
         }
     }
     
     func updateUI() {
+        println("hello")
         if let post = post {
-            postTextLabel.text = post.postText
-            dateTextLabel.text = post.datePosted            
+            postTextLabel.text = post.text
+            
+            var dateFormatter = NSDateFormatter()
+            dateFormatter.dateStyle = .FullStyle
+            dateFormatter.timeStyle = .ShortStyle
+            dateTextLabel.text = dateFormatter.stringFromDate(post.creationTime)
+            
             likeNumLabel.text = "\(post.numLikes)"
+            //dateTextLabel.text = post.datePosted
+            //likeNumLabel.text = "\(post.numLikes)"
         }
     }
     

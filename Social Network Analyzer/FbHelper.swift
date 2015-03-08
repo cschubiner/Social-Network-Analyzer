@@ -12,7 +12,6 @@ struct FbHelper {
     static func getAllPosts(callback: ([FbPost]) -> ()) {
         FBRequestConnection.startWithGraphPath("/me/feed") { connection, result, error in
             var data = (result as [String: AnyObject])["data"]! as [AnyObject]
-            println(data)
             var posts = data.map() { FbPost($0) }
             callback(posts)
         }
