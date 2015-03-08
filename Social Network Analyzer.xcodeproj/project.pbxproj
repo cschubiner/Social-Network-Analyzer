@@ -14,6 +14,8 @@
 		0C364F701AAC2E5A0090E482 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C364F6F1AAC2E5A0090E482 /* Images.xcassets */; };
 		0C364F731AAC2E5A0090E482 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C364F711AAC2E5A0090E482 /* LaunchScreen.xib */; };
 		0C364F7F1AAC2E5A0090E482 /* Social_Network_AnalyzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C364F7E1AAC2E5A0090E482 /* Social_Network_AnalyzerTests.swift */; };
+		E9CA6EA41AAC2FC4004BB817 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9CA6EA31AAC2FC4004BB817 /* LoadingViewController.swift */; };
+		E9CA6EA61AAC2FDB004BB817 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9CA6EA51AAC2FDB004BB817 /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +40,9 @@
 		0C364F781AAC2E5A0090E482 /* Social Network AnalyzerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Social Network AnalyzerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0C364F7D1AAC2E5A0090E482 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0C364F7E1AAC2E5A0090E482 /* Social_Network_AnalyzerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social_Network_AnalyzerTests.swift; sourceTree = "<group>"; };
+		E9CA6EA31AAC2FC4004BB817 /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		E9CA6EA51AAC2FDB004BB817 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		E9CA6EA71AAC302D004BB817 /* Social Network Analyzer-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Social Network Analyzer-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +50,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9CA6EA61AAC2FDB004BB817 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,13 +85,12 @@
 		0C364F631AAC2E5A0090E482 /* Social Network Analyzer */ = {
 			isa = PBXGroup;
 			children = (
-				0C364F661AAC2E5A0090E482 /* AppDelegate.swift */,
 				0C364F681AAC2E5A0090E482 /* FirstViewController.swift */,
 				0C364F6A1AAC2E5A0090E482 /* SecondViewController.swift */,
 				0C364F6C1AAC2E5A0090E482 /* Main.storyboard */,
-				0C364F6F1AAC2E5A0090E482 /* Images.xcassets */,
-				0C364F711AAC2E5A0090E482 /* LaunchScreen.xib */,
+				E9CA6EA31AAC2FC4004BB817 /* LoadingViewController.swift */,
 				0C364F641AAC2E5A0090E482 /* Supporting Files */,
+				E9CA6EA71AAC302D004BB817 /* Social Network Analyzer-Bridging-Header.h */,
 			);
 			path = "Social Network Analyzer";
 			sourceTree = "<group>";
@@ -93,6 +98,10 @@
 		0C364F641AAC2E5A0090E482 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				0C364F661AAC2E5A0090E482 /* AppDelegate.swift */,
+				0C364F6F1AAC2E5A0090E482 /* Images.xcassets */,
+				0C364F711AAC2E5A0090E482 /* LaunchScreen.xib */,
+				E9CA6EA51AAC2FDB004BB817 /* FacebookSDK.framework */,
 				0C364F651AAC2E5A0090E482 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -218,6 +227,7 @@
 				0C364F6B1AAC2E5A0090E482 /* SecondViewController.swift in Sources */,
 				0C364F671AAC2E5A0090E482 /* AppDelegate.swift in Sources */,
 				0C364F691AAC2E5A0090E482 /* FirstViewController.swift in Sources */,
+				E9CA6EA41AAC2FC4004BB817 /* LoadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,9 +352,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Social",
+					Network,
+					Analyzer,
+				);
 				INFOPLIST_FILE = "Social Network Analyzer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Social Network Analyzer/Social Network Analyzer-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -352,9 +371,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Social",
+					Network,
+					Analyzer,
+				);
 				INFOPLIST_FILE = "Social Network Analyzer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Social Network Analyzer/Social Network Analyzer-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -411,6 +438,7 @@
 				0C364F841AAC2E5A0090E482 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0C364F851AAC2E5A0090E482 /* Build configuration list for PBXNativeTarget "Social Network AnalyzerTests" */ = {
 			isa = XCConfigurationList;
@@ -419,6 +447,7 @@
 				0C364F871AAC2E5A0090E482 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

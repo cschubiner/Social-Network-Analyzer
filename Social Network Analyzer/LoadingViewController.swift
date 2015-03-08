@@ -18,30 +18,30 @@ class LoadingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         FBSession.openActiveSessionWithReadPermissions(["public_profile"], allowLoginUI: true, completionHandler: { session, state, error in
-            if error != nil {
-                println(error)
-                self.performSegueWithIdentifier("failure", sender: nil)
-            } else if state == .Open {
-                let accessToken = session.accessTokenData.accessToken
-                FirebaseHelper.ref.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData in
-                    if error != nil {
-                        println(error)
-                        FBSession.activeSession().closeAndClearTokenInformation()
-                        self.performSegueWithIdentifier("failure", sender: nil)
-                    } else {
-                        FirebaseHelper.userRef().observeSingleEventOfType(.Value, withBlock: { snapshot in
-                            println(snapshot.value)
-                            if snapshot.value as? NSObject == NSNull() {
-                                self.performSegueWithIdentifier("new", sender: nil)
-                            } else {
-                                self.performSegueWithIdentifier("success", sender: nil)
-                            }
-                        }, withCancelBlock: { error in
-                            println(error)
-                        })
-                    }
-                })
-            }
+//            if error != nil {
+//                println(error)
+//                self.performSegueWithIdentifier("failure", sender: nil)
+//            } else if state == .Open {
+//                let accessToken = session.accessTokenData.accessToken
+//                FirebaseHelper.ref.authWithOAuthProvider("facebook", token: accessToken, withCompletionBlock: { error, authData in
+//                    if error != nil {
+//                        println(error)
+//                        FBSession.activeSession().closeAndClearTokenInformation()
+//                        self.performSegueWithIdentifier("failure", sender: nil)
+//                    } else {
+//                        FirebaseHelper.userRef().observeSingleEventOfType(.Value, withBlock: { snapshot in
+//                            println(snapshot.value)
+//                            if snapshot.value as? NSObject == NSNull() {
+//                                self.performSegueWithIdentifier("new", sender: nil)
+//                            } else {
+//                                self.performSegueWithIdentifier("success", sender: nil)
+//                            }
+//                        }, withCancelBlock: { error in
+//                            println(error)
+//                        })
+//                    }
+//                })
+//            }
         })
 //        FirebaseHelper.ref.auth
 
