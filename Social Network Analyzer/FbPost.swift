@@ -13,6 +13,7 @@ class FbPost {
     private let data: [String: AnyObject]
     init(_ data: AnyObject) {
         self.data = data as [String: AnyObject]
+        print(data)
     }
     
     var creationTime: NSDate {
@@ -40,5 +41,16 @@ class FbPost {
     
     var numLikes: Int {
         return countElements(likers)
+    }
+    
+    var pictureURL: NSURL? {
+        if let url = data["picture"] as? String {
+            return NSURL(string: url)
+        }
+        return nil
+    }
+    
+    var caption: String? {
+        return data["description"] as? String
     }
 }

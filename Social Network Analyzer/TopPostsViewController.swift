@@ -38,6 +38,7 @@ class TopPostsViewController: UITableViewController {
     }
     
     private func findAllData(allPosts: [FbPost]) {
+        topFBPosts = [FbPost]()
         let sortedPosts = allPosts.sorted { $1.numLikes < $0.numLikes }
         if sortedPosts.count < NUM_TOP_POSTS {
             topFBPosts = sortedPosts
