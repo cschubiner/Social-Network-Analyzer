@@ -19,7 +19,7 @@ class TopPostsViewController: UITableViewController {
     
     var socialNetwork: String = "FB" {
         didSet {
-            findAllData()
+            self.tableView.reloadData()
         }
     }
     
@@ -36,11 +36,8 @@ class TopPostsViewController: UITableViewController {
     var fbHook: Int?
     
     private func findAllData() {
-        if socialNetwork == "FB" {
-            fbHook = FbHelper.registerCallback(findAllFBData)
-        } else if socialNetwork == "IG" {
-            InstagramHelper.getAllPosts(findAllIGData)
-        }
+        fbHook = FbHelper.registerCallback(findAllFBData)
+        InstagramHelper.getAllPosts(findAllIGData)
     }
     
     deinit {
@@ -106,7 +103,7 @@ class TopPostsViewController: UITableViewController {
         if socialNetwork == "FB" {
             cell.post = topFBPosts[indexPath.row]
         } else if socialNetwork == "IG" {
-            cell.IGPost = topIGPosts[indexPath.row]
+            cell.post = topIGPosts[indexPath.row]
         }
         
         return cell

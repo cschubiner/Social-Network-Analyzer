@@ -16,17 +16,17 @@ class TopPostsTableViewCell: UITableViewCell {
     @IBOutlet weak var photoView: UIImageView!
     
     
-    var post : FbPost? {
+    var post : AnyObject? {
         didSet {
             updateUI()
         }
     }
     
-    var IGPost : InstagramMedia? {
+    /*var IGPost : InstagramMedia? {
         didSet {
             updateUI()
         }
-    }
+    }*/
     
     func updateUI() {
         // reset existing post data
@@ -39,7 +39,7 @@ class TopPostsTableViewCell: UITableViewCell {
         dateFormatter.dateStyle = .FullStyle
         dateFormatter.timeStyle = .ShortStyle
         
-        if let post = post {
+        if let post = post as? FbPost {
             if post.text != nil {
                 postTextLabel.text = post.text
             } else if post.caption != nil {
@@ -52,7 +52,7 @@ class TopPostsTableViewCell: UITableViewCell {
             if let url = post.pictureURL {
                 fetchImage(url)
             }
-        } else if let post = IGPost {
+        } else if let post = post as? InstagramMedia {
             if post.caption != nil {
                 postTextLabel.text = post.caption.text
             }

@@ -13,6 +13,7 @@ class FbPost {
     private let data: [String: AnyObject]
     init(_ data: AnyObject) {
         self.data = data as [String: AnyObject]
+        print(data)
     }
     
     var creationTime: NSDate {
