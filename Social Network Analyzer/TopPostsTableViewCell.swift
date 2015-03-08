@@ -8,7 +8,27 @@
 
 import UIKit
 
-class TopPostsTableViewCell: UITableViewCell
-{
+class TopPostsTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var postTextLabel: UILabel!
+    @IBOutlet weak var dateTextLabel: UILabel!
+    @IBOutlet weak var likeNumLabel: UILabel!
+    @IBOutlet weak var photoView: UIView!
+    
+    
+    var post : TopFBPost? {
+        didSet {
+            updateUI()
+        }
+    }
+    
+    func updateUI() {
+        if let post = post {
+            postTextLabel.text = post.postText
+            dateTextLabel.text = post.datePosted            
+            likeNumLabel.text = "\(post.numLikes)"
+        }
+    }
+    
     
 }

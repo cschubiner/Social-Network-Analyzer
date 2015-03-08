@@ -34,12 +34,12 @@
 		0CB54BD31AAC4CEC00436D2F /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB54BD21AAC4CEC00436D2F /* PeopleTableViewController.swift */; };
 		192753F71AAC49B40068F233 /* TopPostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192753F61AAC49B40068F233 /* TopPostsTableViewCell.swift */; };
 		192753F91AAC49CD0068F233 /* TopPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192753F81AAC49CD0068F233 /* TopPostsViewController.swift */; };
+		192753FB1AAC553B0068F233 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E905C1DD1AAC545000160A1E /* FacebookSDK.framework */; };
 		E905C1CE1AAC344900160A1E /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905C1CD1AAC344900160A1E /* LoadingViewController.swift */; };
 		E905C1D01AAC408500160A1E /* GraphsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905C1CF1AAC408500160A1E /* GraphsViewController.swift */; };
 		E905C1D41AAC438000160A1E /* HoursHistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905C1D31AAC438000160A1E /* HoursHistogramView.swift */; };
 		E905C1D81AAC4AF100160A1E /* FbHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905C1D71AAC4AF100160A1E /* FbHelper.swift */; };
 		E905C1DC1AAC4E1D00160A1E /* FbPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905C1DB1AAC4E1D00160A1E /* FbPost.swift */; };
-		E905C1DE1AAC545000160A1E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E905C1DD1AAC545000160A1E /* FacebookSDK.framework */; };
 		E975FE1F1AAC31F400C74B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975FE1E1AAC31F400C74B14 /* AppDelegate.swift */; };
 		E975FE261AAC31F400C74B14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E975FE241AAC31F400C74B14 /* Main.storyboard */; };
 		E975FE281AAC31F400C74B14 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E975FE271AAC31F400C74B14 /* Images.xcassets */; };
@@ -133,7 +133,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E905C1DE1AAC545000160A1E /* FacebookSDK.framework in Frameworks */,
+				192753FB1AAC553B0068F233 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +601,9 @@
 					"$(PROJECT_DIR)/Social",
 					Network,
 					Analyzer,
+					"$(PROJECT_DIR)/Social",
+					Network,
+					Analyzer,
 				);
 				INFOPLIST_FILE = "Social Network Analyzer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -617,6 +620,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Social",
+					Network,
+					Analyzer,
 					"$(PROJECT_DIR)/Social",
 					Network,
 					Analyzer,
