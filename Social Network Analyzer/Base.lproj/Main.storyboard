@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fUZ-2b-0Re">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fUZ-2b-0Re">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -9,15 +9,56 @@
         <scene sceneID="sVI-mu-ePs">
             <objects>
                 <tableViewController id="clw-ML-HKn" customClass="TopPostsViewController" customModule="Social_Network_Analyzer" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="n3d-Bl-Tjd">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="132" sectionHeaderHeight="22" sectionFooterHeight="22" id="n3d-Bl-Tjd">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="0ir-rB-jVa">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="fbPost" rowHeight="132" id="0ir-rB-jVa" customClass="TopPostsTableViewCell" customModule="Social_Network_Analyzer" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0ir-rB-jVa" id="8xp-gL-g1g">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Post Text" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nmn-1b-405">
+                                            <rect key="frame" x="8" y="8" width="584" height="93.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xzQ-oi-0cQ">
+                                            <rect key="frame" x="8" y="109.5" width="24" height="13.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10,000" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8s-9K-8AJ">
+                                            <rect key="frame" x="556.5" y="109.5" width="35.5" height="13.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👍" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4U-hk-SwI">
+                                            <rect key="frame" x="533.5" y="109.5" width="15" height="13.5"/>
+                                            <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="nmn-1b-405" firstAttribute="trailing" secondItem="8xp-gL-g1g" secondAttribute="trailingMargin" id="0dY-Yd-GvQ"/>
+                                        <constraint firstItem="b8s-9K-8AJ" firstAttribute="top" secondItem="nmn-1b-405" secondAttribute="bottom" constant="8" symbolic="YES" id="0xE-93-2Sl"/>
+                                        <constraint firstItem="nmn-1b-405" firstAttribute="top" secondItem="8xp-gL-g1g" secondAttribute="topMargin" id="2P7-N3-m39"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="q4U-hk-SwI" secondAttribute="bottom" id="3R5-Hp-VEU"/>
+                                        <constraint firstItem="nmn-1b-405" firstAttribute="leading" secondItem="8xp-gL-g1g" secondAttribute="leadingMargin" id="3tM-hh-X6C"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="xzQ-oi-0cQ" secondAttribute="bottom" id="7Wa-aC-XEO"/>
+                                        <constraint firstAttribute="centerX" secondItem="nmn-1b-405" secondAttribute="centerX" id="BHB-h4-rrj"/>
+                                        <constraint firstItem="xzQ-oi-0cQ" firstAttribute="leading" secondItem="8xp-gL-g1g" secondAttribute="leadingMargin" id="ISw-SJ-hwd"/>
+                                        <constraint firstItem="xzQ-oi-0cQ" firstAttribute="top" secondItem="nmn-1b-405" secondAttribute="bottom" constant="8" symbolic="YES" id="LAr-gH-U5a"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="b8s-9K-8AJ" secondAttribute="bottom" id="Q6G-Vx-qaS"/>
+                                        <constraint firstItem="q4U-hk-SwI" firstAttribute="top" secondItem="nmn-1b-405" secondAttribute="bottom" constant="8" symbolic="YES" id="R9s-eR-18f"/>
+                                        <constraint firstItem="b8s-9K-8AJ" firstAttribute="trailing" secondItem="8xp-gL-g1g" secondAttribute="trailingMargin" id="f4d-oh-Kz4"/>
+                                        <constraint firstItem="b8s-9K-8AJ" firstAttribute="leading" secondItem="q4U-hk-SwI" secondAttribute="trailing" constant="8" symbolic="YES" id="hYF-xv-gNY"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                             </tableViewCell>
                         </prototypes>
