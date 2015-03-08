@@ -152,11 +152,11 @@
                     <navigationItem key="navigationItem" title="Your Biggest Fans" id="S03-zh-SRr">
                         <barButtonItem key="rightBarButtonItem" style="plain" id="k0p-hf-TCT">
                             <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="3qm-of-3eB">
-                                <rect key="frame" x="435" y="7" width="100" height="30"/>
+                                <rect key="frame" x="484" y="7" width="101" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="FB" width="50"/>
                                     <segment title="IG" width="50"/>
+                                    <segment title="FB" width="50"/>
                                 </segments>
                                 <connections>
                                     <action selector="toggleSocialNetwork:" destination="I3F-HH-Cwk" eventType="valueChanged" id="PLM-dw-oUN"/>

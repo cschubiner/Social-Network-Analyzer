@@ -23,9 +23,9 @@ class PeopleTableViewController: UITableViewController {
     
     @IBAction func toggleSocialNetwork(sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
-        case 0:
-            currentSocialNetwork = SocialNetwork.Facebook
         case 1:
+            currentSocialNetwork = SocialNetwork.Facebook
+        case 0:
             currentSocialNetwork = SocialNetwork.Instagram
         default:
             break
@@ -34,7 +34,7 @@ class PeopleTableViewController: UITableViewController {
         self.tableView.reloadData()
     }
     
-    var currentSocialNetwork: SocialNetwork = SocialNetwork.Facebook
+    var currentSocialNetwork: SocialNetwork = SocialNetwork.Instagram
     
     var instagramLikers: [PostLiker] = []
     var facebookLikers: [PostLiker] = []
