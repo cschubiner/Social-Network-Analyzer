@@ -12,11 +12,7 @@ class LoadingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        FBSession.openActiveSessionWithReadPermissions(["public_profile, user_photos, read_stream"], allowLoginUI: true, completionHandler: { session, state, error in
-            println(session)
-            println(state)
-            println(error)
-        })
+     
 
         // Do any additional setup after loading the view.
     }
@@ -27,6 +23,14 @@ class LoadingViewController: UIViewController {
     }
     
 
+    @IBAction func loginWithFacebookButtonTapped(sender: UIButton) {
+        FBSession.openActiveSessionWithReadPermissions(["public_profile, user_photos, read_stream"], allowLoginUI: true, completionHandler: { session, state, error in
+            println(session)
+            println(state)
+            println(error)
+        })
+    }
+    
     /*
     // MARK: - Navigation
 
