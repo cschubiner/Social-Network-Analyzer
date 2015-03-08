@@ -9,25 +9,29 @@
 import UIKit
 
 class GraphsViewController: UIViewController {
-    @IBOutlet weak var bestTime: HoursHistogramView!
-    @IBOutlet weak var timeAfter: HoursHistogramView!
-
+    @IBOutlet weak var postsByHourView: HoursHistogramView!
+    @IBOutlet weak var avgLikesView: HoursHistogramView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        FbHelper.getAllPosts() { posts in
+        var postsByHour = [Double](count: 24, repeatedValue: 0)
+        var avgLikesPerHour = [Double](count: 24, repeatedValue: 0)
+        FbHelper.keepGettingAllPosts() { posts in
             for post in posts {
-                println("\(post.numLikes): \(post.text)")
+                let calendar = NSCalendar.currentCalendar()
+                let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: post.creationTime)
+                let hour = components.hour
+                let totalLikes = avgLikesPerHour[hour] * postsByHour[hour] + Double(post.numLikes)
+                postsByHour[hour] += 1
+                avgLikesPerHour[hour] = totalLikes / postsByHour[hour]
             }
+            self.postsByHourView.data = postsByHour
+            self.avgLikesView.data = avgLikesPerHour
         }
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
 
     /*
     // MARK: - Navigation

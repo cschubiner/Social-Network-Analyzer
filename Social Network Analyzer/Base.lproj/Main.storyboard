@@ -186,31 +186,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zY0-l7-CTA" customClass="HoursHistogramView" customModule="Social_Network_Analyzer" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="285.5" width="600" height="257.5"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sce-Uc-J4W" customClass="HoursHistogramView" customModule="Social_Network_Analyzer" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="20" width="600" height="257.5"/>
+                                <rect key="frame" x="0.0" y="49" width="600" height="233"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Posts, by Hour" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="agi-HN-gud">
+                                <rect key="frame" x="16" y="20" width="200.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czQ-Yn-zNk" customClass="HoursHistogramView" customModule="Social_Network_Analyzer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="318" width="600" height="233"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average likes per post, by hour of post" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pkw-lK-jSY">
+                                <rect key="frame" x="16" y="289" width="296.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="sce-Uc-J4W" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="4Wk-4v-Sbn"/>
-                            <constraint firstItem="sce-Uc-J4W" firstAttribute="height" secondItem="zY0-l7-CTA" secondAttribute="height" id="6c2-Lh-zGH"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="zY0-l7-CTA" secondAttribute="trailing" constant="-16" id="GKd-2T-Z4N"/>
-                            <constraint firstItem="sce-Uc-J4W" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-16" id="fSK-3F-Evj"/>
-                            <constraint firstItem="zY0-l7-CTA" firstAttribute="top" secondItem="sce-Uc-J4W" secondAttribute="bottom" constant="8" id="h1R-Ma-Zs3"/>
-                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="zY0-l7-CTA" secondAttribute="bottom" constant="8" id="j3m-W6-8px"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="sce-Uc-J4W" secondAttribute="trailing" constant="-16" id="qfr-J6-eUf"/>
-                            <constraint firstItem="zY0-l7-CTA" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-16" id="wVh-o2-wkx"/>
+                            <constraint firstItem="pkw-lK-jSY" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="5Qf-Bb-DJi"/>
+                            <constraint firstItem="Djb-ko-YwX" firstAttribute="top" secondItem="czQ-Yn-zNk" secondAttribute="bottom" id="Ef5-kP-var"/>
+                            <constraint firstItem="agi-HN-gud" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" id="GbG-Qg-3Qj"/>
+                            <constraint firstItem="czQ-Yn-zNk" firstAttribute="top" secondItem="pkw-lK-jSY" secondAttribute="bottom" constant="8" id="J70-V5-wFA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sce-Uc-J4W" secondAttribute="trailing" constant="-16" id="LP7-QR-6HE"/>
+                            <constraint firstItem="sce-Uc-J4W" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-16" id="PEz-M7-7Ax"/>
+                            <constraint firstItem="sce-Uc-J4W" firstAttribute="top" secondItem="agi-HN-gud" secondAttribute="bottom" constant="8" id="beS-wP-kNW"/>
+                            <constraint firstItem="pkw-lK-jSY" firstAttribute="top" secondItem="sce-Uc-J4W" secondAttribute="bottom" constant="7.5" id="lwu-HH-eI6"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="czQ-Yn-zNk" secondAttribute="trailing" constant="-16" id="qfI-ap-ctP"/>
+                            <constraint firstItem="czQ-Yn-zNk" firstAttribute="leading" secondItem="QS5-Rx-YEW" secondAttribute="leadingMargin" constant="-16" id="smV-Xo-ros"/>
+                            <constraint firstItem="agi-HN-gud" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" id="yae-8M-Tcy"/>
+                            <constraint firstItem="czQ-Yn-zNk" firstAttribute="height" secondItem="sce-Uc-J4W" secondAttribute="height" id="zDc-aY-UFc"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Graphs" image="second" id="cPa-gy-q4n"/>
                     <connections>
-                        <outlet property="bestTime" destination="sce-Uc-J4W" id="FI9-Va-aCM"/>
-                        <outlet property="timeAfter" destination="zY0-l7-CTA" id="BUL-B2-Bpb"/>
+                        <outlet property="avgLikesView" destination="czQ-Yn-zNk" id="F9s-bT-TKT"/>
+                        <outlet property="postsByHourView" destination="sce-Uc-J4W" id="cLh-bu-rgb"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
