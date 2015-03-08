@@ -93,7 +93,12 @@ class TopPostsViewController: UITableViewController {
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return topFBPosts.count
+        if socialNetwork == "FB" {
+            return topFBPosts.count
+        } else if socialNetwork == "IG" {
+            return topIGPosts.count
+        }
+        return 1
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
