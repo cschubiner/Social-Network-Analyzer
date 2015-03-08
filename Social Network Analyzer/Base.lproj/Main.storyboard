@@ -156,7 +156,18 @@
                             <outlet property="delegate" destination="clw-ML-HKn" id="xBp-Ag-0T6"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Top Posts" id="eHd-Ec-XW8"/>
+                    <navigationItem key="navigationItem" title="Top Posts" id="eHd-Ec-XW8">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="5UD-IN-ayh">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="5ni-pt-hJg">
+                                <rect key="frame" x="435" y="7" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="FB" width="50"/>
+                                    <segment title="IG" width="50"/>
+                                </segments>
+                            </segmentedControl>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xo4-9E-nxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -204,9 +215,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="360"/>
+            <point key="canvasLocation" x="1562" y="360"/>
         </scene>
-        <!--People-->
+        <!--Your Biggest Fans-->
         <scene sceneID="xaL-n8-WQv">
             <objects>
                 <tableViewController id="I3F-HH-Cwk" customClass="PeopleTableViewController" customModule="Social_Network_Analyzer" customModuleProvider="target" sceneMemberID="viewController">
@@ -227,11 +238,22 @@
                             <outlet property="delegate" destination="I3F-HH-Cwk" id="Noa-Ia-RIu"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="People" id="xZP-8S-hjS"/>
+                    <navigationItem key="navigationItem" title="Your Biggest Fans" id="S03-zh-SRr">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="k0p-hf-TCT">
+                            <segmentedControl key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="3qm-of-3eB">
+                                <rect key="frame" x="435" y="7" width="100" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <segments>
+                                    <segment title="FB" width="50"/>
+                                    <segment title="IG" width="50"/>
+                                </segments>
+                            </segmentedControl>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qo4-Lj-sLY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="13" y="867"/>
+            <point key="canvasLocation" x="825" y="867"/>
         </scene>
         <!--Loading View Controller-->
         <scene sceneID="Al8-lL-gda">
@@ -337,7 +359,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="8rJ-Kc-sve" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
-                        <segue destination="I3F-HH-Cwk" kind="relationship" relationship="viewControllers" id="EgS-iE-F8Y"/>
+                        <segue destination="GMY-Nx-Zdd" kind="relationship" relationship="viewControllers" id="EgS-iE-F8Y"/>
                         <segue destination="VoV-sw-ovA" kind="relationship" relationship="viewControllers" id="AA3-yK-auz"/>
                     </connections>
                 </tabBarController>
@@ -363,6 +385,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N3G-D2-rCq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="750" y="-1002"/>
+        </scene>
+        <!--People-->
+        <scene sceneID="IYP-uw-ufI">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GMY-Nx-Zdd" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="People" id="xZP-8S-hjS"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="eA3-Sx-3w5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="I3F-HH-Cwk" kind="relationship" relationship="rootViewController" id="MAf-wr-sRf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Cc-Ha-pBd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13" y="867"/>
         </scene>
     </scenes>
     <resources>
