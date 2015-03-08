@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fUZ-2b-0Re">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fUZ-2b-0Re">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -272,7 +272,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="ThC-0O-wbr" kind="relationship" relationship="viewControllers" id="bWk-XY-y37"/>
+                        <segue destination="S2j-xL-DrX" kind="relationship" relationship="viewControllers" id="Qyf-E5-Hqo"/>
                         <segue destination="GMY-Nx-Zdd" kind="relationship" relationship="viewControllers" id="EgS-iE-F8Y"/>
                         <segue destination="VoV-sw-ovA" kind="relationship" relationship="viewControllers" id="AA3-yK-auz"/>
                     </connections>
@@ -320,6 +320,23 @@
             <point key="canvasLocation" x="13" y="867"/>
         </scene>
         <!--Graphs-->
+        <scene sceneID="oUA-Al-Q6r">
+            <objects>
+                <navigationController id="S2j-xL-DrX" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Graphs" id="Bd5-Ns-jYs"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Psg-ge-3Ge">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ThC-0O-wbr" kind="relationship" relationship="rootViewController" id="HaE-XK-mEo"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="K4k-wv-4wQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="740" y="54"/>
+        </scene>
+        <!--Graphs-->
         <scene sceneID="u1l-cO-Chi">
             <objects>
                 <viewController id="ThC-0O-wbr" customClass="GraphsViewController" customModule="Social_Network_Analyzer" customModuleProvider="target" sceneMemberID="viewController">
@@ -332,13 +349,13 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wZ-ne-QR6">
-                                <rect key="frame" x="16" y="20" width="568" height="931"/>
+                                <rect key="frame" x="16" y="64" width="568" height="887"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cGc-RA-Dvb">
-                                        <rect key="frame" x="0.0" y="0.0" width="568" height="507.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="568" height="511.5"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Numer of posts, by hour" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeQ-HX-Tw1">
-                                                <rect key="frame" x="8" y="8" width="186.5" height="20.5"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of posts, by hour" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeQ-HX-Tw1">
+                                                <rect key="frame" x="0.0" y="8" width="196.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -351,23 +368,23 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9U-0Z-0du">
-                                                <rect key="frame" x="0.0" y="236" width="28.5" height="13.5"/>
+                                                <rect key="frame" x="0.0" y="238" width="28.5" height="13.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average likes per post, by hour of post" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmd-nE-F5o">
-                                                <rect key="frame" x="0.0" y="257" width="296.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="259" width="296.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMQ-Tj-khn" customClass="HoursHistogramView" customModule="Social_Network_Analyzer" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="286" width="568" height="200"/>
+                                                <rect key="frame" x="0.0" y="288" width="568" height="200"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12pm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PqA-4x-YUq">
-                                                <rect key="frame" x="270" y="236" width="29.5" height="13.5"/>
+                                                <rect key="frame" x="270" y="238" width="29.5" height="13.5"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -380,13 +397,13 @@
                                             <constraint firstItem="Ss9-dO-GB6" firstAttribute="leading" secondItem="cGc-RA-Dvb" secondAttribute="leading" id="5eZ-FB-Xm4"/>
                                             <constraint firstItem="hmd-nE-F5o" firstAttribute="top" secondItem="Ss9-dO-GB6" secondAttribute="bottom" constant="8" id="5vX-FA-TAF"/>
                                             <constraint firstItem="PqA-4x-YUq" firstAttribute="baseline" secondItem="Q9U-0Z-0du" secondAttribute="baseline" id="94e-If-m22"/>
-                                            <constraint firstItem="Q9U-0Z-0du" firstAttribute="top" secondItem="Ss9-dO-GB6" secondAttribute="bottom" id="9xh-MU-FMd"/>
+                                            <constraint firstItem="Q9U-0Z-0du" firstAttribute="top" secondItem="Ss9-dO-GB6" secondAttribute="bottom" constant="2" id="9xh-MU-FMd"/>
                                             <constraint firstAttribute="bottom" secondItem="CMQ-Tj-khn" secondAttribute="bottom" constant="8" id="F4M-EH-yno"/>
                                             <constraint firstItem="hmd-nE-F5o" firstAttribute="leading" secondItem="cGc-RA-Dvb" secondAttribute="leading" id="HTG-TG-sis"/>
                                             <constraint firstAttribute="trailing" secondItem="CMQ-Tj-khn" secondAttribute="trailing" id="KPT-W7-026"/>
                                             <constraint firstItem="Ss9-dO-GB6" firstAttribute="top" secondItem="eeQ-HX-Tw1" secondAttribute="bottom" constant="8" id="QIO-f0-xoD"/>
                                             <constraint firstItem="CMQ-Tj-khn" firstAttribute="height" secondItem="Ss9-dO-GB6" secondAttribute="height" id="R70-xF-fy2"/>
-                                            <constraint firstItem="eeQ-HX-Tw1" firstAttribute="leading" secondItem="cGc-RA-Dvb" secondAttribute="leading" constant="8" id="WVv-FM-iVT"/>
+                                            <constraint firstItem="eeQ-HX-Tw1" firstAttribute="leading" secondItem="cGc-RA-Dvb" secondAttribute="leading" id="WVv-FM-iVT"/>
                                             <constraint firstItem="hmd-nE-F5o" firstAttribute="top" secondItem="Q9U-0Z-0du" secondAttribute="bottom" constant="8" id="byo-cv-sEa"/>
                                             <constraint firstAttribute="trailing" secondItem="Ss9-dO-GB6" secondAttribute="trailing" id="icj-8R-AzV"/>
                                             <constraint firstItem="CMQ-Tj-khn" firstAttribute="top" secondItem="hmd-nE-F5o" secondAttribute="bottom" constant="8" id="nad-BB-5lX"/>
@@ -401,13 +418,13 @@
                                         </variation>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12pm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="an0-FD-GWw">
-                                        <rect key="frame" x="269" y="486" width="29.5" height="13.5"/>
+                                        <rect key="frame" x="269" y="490" width="29.5" height="13.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23h-f3-eHB">
-                                        <rect key="frame" x="0.0" y="486" width="28.5" height="13.5"/>
+                                        <rect key="frame" x="0.0" y="490" width="28.5" height="13.5"/>
                                         <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -422,7 +439,7 @@
                                     <constraint firstItem="cGc-RA-Dvb" firstAttribute="width" secondItem="6wZ-ne-QR6" secondAttribute="width" id="qHa-Pm-L1v"/>
                                     <constraint firstItem="23h-f3-eHB" firstAttribute="baseline" secondItem="an0-FD-GWw" secondAttribute="baseline" id="u6f-6e-uzj"/>
                                     <constraint firstItem="cGc-RA-Dvb" firstAttribute="bottom" secondItem="23h-f3-eHB" secondAttribute="bottom" constant="8" id="ze8-8Y-fX2"/>
-                                    <constraint firstItem="23h-f3-eHB" firstAttribute="top" secondItem="CMQ-Tj-khn" secondAttribute="bottom" id="zeZ-B0-AMx"/>
+                                    <constraint firstItem="23h-f3-eHB" firstAttribute="top" secondItem="CMQ-Tj-khn" secondAttribute="bottom" constant="2" id="zeZ-B0-AMx"/>
                                     <constraint firstItem="cGc-RA-Dvb" firstAttribute="top" secondItem="6wZ-ne-QR6" secondAttribute="top" id="zwG-Ch-mVK"/>
                                 </constraints>
                             </scrollView>
@@ -436,6 +453,7 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Graphs" image="second" id="fve-8Z-Ir3"/>
+                    <navigationItem key="navigationItem" title="Graphs" id="anU-dF-mSt"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="1000"/>
                     <connections>
