@@ -25,6 +25,7 @@ class LoadingViewController: UIViewController {
                 println("Logged in with Facebook!")
                 println("permissions: \(FBSession.activeSession().accessTokenData.permissions)")
                 dispatch_async(dispatch_get_main_queue()) {
+                    FbHelper.startLoadingData()
                     self.instagramHasLoaded = true;
                     self.performSegueWithIdentifier("loadingToInstagramController", sender: nil)
                 }

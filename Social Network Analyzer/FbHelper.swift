@@ -10,36 +10,41 @@ import Foundation
 
 struct FbHelper {
     static var allPosts = [FbPost]()
-    static var isLoadingPosts = false
-    static func getAllPosts(callback: ([FbPost]) -> ()) {
-        FBRequestConnection.startWithGraphPath("/me/feed") { connection, result, error in
-            var data = (result as [String: AnyObject])["data"]! as [AnyObject]
-            var posts = data.map() { FbPost($0) }
-            callback(posts)
-        }
+    private static var callbacks = Dictionary<Int, (([FbPost]) -> ())>()
+    private static var nextCallbackId = 0
+    
+    static func startLoadingData() {
+        FBRequestConnection.startWithGraphPath("/me/feed", completionHandler: dataLoaded)
     }
     
-    static func keepGettingAllPosts(callback: ([FbPost]) -> ()) {
-        allPosts = [FbPost]()
-        isLoadingPosts = true
-        FBRequestConnection.startWithGraphPath("/me/feed") { connection, result, error in
-            var data = (result as [String: AnyObject])["data"]! as [AnyObject]
-            var posts = data.map() { FbPost($0) }
-            self.allPosts += posts
-            if let paging = result["paging"] as? [String: AnyObject] {
-                if let next = paging["next"] as? String {
-                    println(next)
-                    let url = NSURL(string: next)!
-                    let request = NSMutableURLRequest(URL: url)
-                    connection.urlRequest = request
-                    connection.start()
-                } else {
-                    self.isLoadingPosts = false
-                }
-            } else {
-                self.isLoadingPosts = false
-            }
+    static func registerCallback(callback: ([FbPost]) -> ()) -> Int {
+        let id = nextCallbackId
+        nextCallbackId += 1
+        callbacks[id] = callback
+        if allPosts.count > 0 {
+            callback(allPosts)
+        }
+        return id
+    }
+    
+    static func deregisterCallback(id: Int) {
+        callbacks.removeValueForKey(id)
+    }
+    
+    private static func dataLoaded(connection: FBRequestConnection!, result: AnyObject!, error: NSError!) {
+        var data = (result as [String: AnyObject])["data"]! as [AnyObject]
+        var posts = data.map() { FbPost($0) }
+        self.allPosts += posts
+        for (id, callback) in callbacks {
             callback(posts)
+        }
+        if let paging = result["paging"] as? [String: AnyObject] {
+            if let next = paging["next"] as? String {
+                let url = NSURL(string: next)!
+                let request = NSMutableURLRequest(URL: url)
+                connection.urlRequest = request
+                connection.start()
+            }
         }
     }
 }

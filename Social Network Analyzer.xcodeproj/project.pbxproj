@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0CAA20381AAC69D800BDB395 /* InstagramHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAA20371AAC69D800BDB395 /* InstagramHelper.swift */; };
-		0CAA20391AAC69E300BDB395 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E905C1DD1AAC545000160A1E /* FacebookSDK.framework */; };
 		0CB54BAD1AAC43B000436D2F /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB54B841AAC43B000436D2F /* AFHTTPRequestOperation.m */; };
 		0CB54BAE1AAC43B000436D2F /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB54B861AAC43B000436D2F /* AFHTTPRequestOperationManager.m */; };
 		0CB54BAF1AAC43B000436D2F /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB54B881AAC43B000436D2F /* AFHTTPSessionManager.m */; };
@@ -41,6 +40,7 @@
 		E905C1D41AAC438000160A1E /* HoursHistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905C1D31AAC438000160A1E /* HoursHistogramView.swift */; };
 		E905C1D81AAC4AF100160A1E /* FbHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905C1D71AAC4AF100160A1E /* FbHelper.swift */; };
 		E905C1DC1AAC4E1D00160A1E /* FbPost.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905C1DB1AAC4E1D00160A1E /* FbPost.swift */; };
+		E905C1E81AAC77F700160A1E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E905C1E71AAC77F700160A1E /* FacebookSDK.framework */; };
 		E975FE1F1AAC31F400C74B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975FE1E1AAC31F400C74B14 /* AppDelegate.swift */; };
 		E975FE261AAC31F400C74B14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E975FE241AAC31F400C74B14 /* Main.storyboard */; };
 		E975FE281AAC31F400C74B14 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E975FE271AAC31F400C74B14 /* Images.xcassets */; };
@@ -117,7 +117,7 @@
 		E905C1D31AAC438000160A1E /* HoursHistogramView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoursHistogramView.swift; sourceTree = "<group>"; };
 		E905C1D71AAC4AF100160A1E /* FbHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FbHelper.swift; sourceTree = "<group>"; };
 		E905C1DB1AAC4E1D00160A1E /* FbPost.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FbPost.swift; sourceTree = "<group>"; };
-		E905C1DD1AAC545000160A1E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "Social Network Analyzer/FacebookSDK.framework"; sourceTree = "<group>"; };
+		E905C1E71AAC77F700160A1E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "Social Network Analyzer/FacebookSDK.framework"; sourceTree = "<group>"; };
 		E975FE191AAC31F400C74B14 /* Social Network Analyzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social Network Analyzer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E975FE1D1AAC31F400C74B14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E975FE1E1AAC31F400C74B14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -135,7 +135,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CAA20391AAC69E300BDB395 /* FacebookSDK.framework in Frameworks */,
+				E905C1E81AAC77F700160A1E /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +246,7 @@
 		E905C1CA1AAC33C200160A1E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E905C1DD1AAC545000160A1E /* FacebookSDK.framework */,
+				E905C1E71AAC77F700160A1E /* FacebookSDK.framework */,
 				0CB54B821AAC43B000436D2F /* AFNetworking */,
 				0CB54B981AAC43B000436D2F /* InstagramKit */,
 			);
@@ -611,6 +611,15 @@
 					"$(PROJECT_DIR)/Social",
 					Network,
 					Analyzer,
+					"$(PROJECT_DIR)/Social",
+					Network,
+					Analyzer,
+					"$(PROJECT_DIR)/Social",
+					Network,
+					Analyzer,
+					"$(PROJECT_DIR)/Social",
+					Network,
+					Analyzer,
 				);
 				INFOPLIST_FILE = "Social Network Analyzer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -627,6 +636,15 @@
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Social",
+					Network,
+					Analyzer,
+					"$(PROJECT_DIR)/Social",
+					Network,
+					Analyzer,
+					"$(PROJECT_DIR)/Social",
+					Network,
+					Analyzer,
 					"$(PROJECT_DIR)/Social",
 					Network,
 					Analyzer,

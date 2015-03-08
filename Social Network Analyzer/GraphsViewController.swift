@@ -12,11 +12,13 @@ class GraphsViewController: UIViewController {
     @IBOutlet weak var postsByHourView: HoursHistogramView!
     @IBOutlet weak var avgLikesView: HoursHistogramView!
     
+    var fbHook: Int?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         var postsByHour = [Double](count: 24, repeatedValue: 0)
         var avgLikesPerHour = [Double](count: 24, repeatedValue: 0)
-        FbHelper.keepGettingAllPosts() { posts in
+        fbHook = FbHelper.registerCallback() { posts in
             for post in posts {
                 let calendar = NSCalendar.currentCalendar()
                 let components = calendar.components(.CalendarUnitHour | .CalendarUnitMinute, fromDate: post.creationTime)
@@ -30,6 +32,12 @@ class GraphsViewController: UIViewController {
         }
 
         // Do any additional setup after loading the view.
+    }
+    
+    deinit {
+        if let hook = fbHook {
+            FbHelper.deregisterCallback(hook)
+        }
     }
 
 

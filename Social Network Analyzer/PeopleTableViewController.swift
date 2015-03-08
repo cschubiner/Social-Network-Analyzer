@@ -38,6 +38,7 @@ class PeopleTableViewController: UITableViewController {
     
     var instagramLikers: [PostLiker] = []
     var facebookLikers: [PostLiker] = []
+    var fbHook: Int?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -77,6 +78,16 @@ class PeopleTableViewController: UITableViewController {
                 })
             }
         })
+        
+        fbHook = FbHelper.registerCallback() { posts in
+            // code here
+        }
+    }
+    
+    deinit {
+        if let fbHook = fbHook {
+            FbHelper.deregisterCallback(fbHook)
+        }
     }
     
     override func didReceiveMemoryWarning() {
