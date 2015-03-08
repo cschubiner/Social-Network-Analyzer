@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0CB54B811AAC437600436D2F /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E905C1D11AAC42EF00160A1E /* FacebookSDK.framework */; };
 		0CB54BAD1AAC43B000436D2F /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB54B841AAC43B000436D2F /* AFHTTPRequestOperation.m */; };
 		0CB54BAE1AAC43B000436D2F /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB54B861AAC43B000436D2F /* AFHTTPRequestOperationManager.m */; };
 		0CB54BAF1AAC43B000436D2F /* AFHTTPSessionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB54B881AAC43B000436D2F /* AFHTTPSessionManager.m */; };
@@ -32,6 +31,9 @@
 		0CB54BCC1AAC44A700436D2F /* IKMediaCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB54BC81AAC44A700436D2F /* IKMediaCell.m */; };
 		0CB54BCD1AAC44A700436D2F /* IKCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB54BCA1AAC44A700436D2F /* IKCollectionViewController.m */; };
 		0CB54BD01AAC44B200436D2F /* IKMediaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0CB54BCF1AAC44B200436D2F /* IKMediaViewController.m */; };
+		192753F71AAC49B40068F233 /* TopPostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192753F61AAC49B40068F233 /* TopPostsTableViewCell.swift */; };
+		192753F91AAC49CD0068F233 /* TopPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192753F81AAC49CD0068F233 /* TopPostsViewController.swift */; };
+		192753FA1AAC49E30068F233 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E905C1D11AAC42EF00160A1E /* FacebookSDK.framework */; };
 		E905C1CE1AAC344900160A1E /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905C1CD1AAC344900160A1E /* LoadingViewController.swift */; };
 		E905C1D01AAC408500160A1E /* GraphsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905C1CF1AAC408500160A1E /* GraphsViewController.swift */; };
 		E975FE1F1AAC31F400C74B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975FE1E1AAC31F400C74B14 /* AppDelegate.swift */; };
@@ -101,6 +103,8 @@
 		0CB54BCA1AAC44A700436D2F /* IKCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKCollectionViewController.m; sourceTree = "<group>"; };
 		0CB54BCE1AAC44B200436D2F /* IKMediaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IKMediaViewController.h; sourceTree = "<group>"; };
 		0CB54BCF1AAC44B200436D2F /* IKMediaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IKMediaViewController.m; sourceTree = "<group>"; };
+		192753F61AAC49B40068F233 /* TopPostsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopPostsTableViewCell.swift; sourceTree = "<group>"; };
+		192753F81AAC49CD0068F233 /* TopPostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopPostsViewController.swift; sourceTree = "<group>"; };
 		E905C1CD1AAC344900160A1E /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		E905C1CF1AAC408500160A1E /* GraphsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphsViewController.swift; sourceTree = "<group>"; };
 		E905C1D11AAC42EF00160A1E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "Social Network Analyzer/FacebookSDK.framework"; sourceTree = "<group>"; };
@@ -121,7 +125,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CB54B811AAC437600436D2F /* FacebookSDK.framework in Frameworks */,
+				192753FA1AAC49E30068F233 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +272,8 @@
 				E975FE1C1AAC31F400C74B14 /* Supporting Files */,
 				E975FE421AAC326000C74B14 /* Social Network Analyzer-Bridging-Header.h */,
 				E905C1CD1AAC344900160A1E /* LoadingViewController.swift */,
+				192753F61AAC49B40068F233 /* TopPostsTableViewCell.swift */,
+				192753F81AAC49CD0068F233 /* TopPostsViewController.swift */,
 				E905C1CF1AAC408500160A1E /* GraphsViewController.swift */,
 				0CB54BC31AAC44A200436D2F /* Instagram */,
 			);
@@ -410,9 +416,11 @@
 				0CB54BBA1AAC43B000436D2F /* InstagramComment.m in Sources */,
 				0CB54BB21AAC43B000436D2F /* AFURLConnectionOperation.m in Sources */,
 				0CB54BCD1AAC44A700436D2F /* IKCollectionViewController.m in Sources */,
+				192753F71AAC49B40068F233 /* TopPostsTableViewCell.swift in Sources */,
 				0CB54BB11AAC43B000436D2F /* AFSecurityPolicy.m in Sources */,
 				0CB54BB71AAC43B000436D2F /* InstagramEngine.m in Sources */,
 				0CB54BCB1AAC44A700436D2F /* IKCell.m in Sources */,
+				192753F91AAC49CD0068F233 /* TopPostsViewController.swift in Sources */,
 				0CB54BAF1AAC43B000436D2F /* AFHTTPSessionManager.m in Sources */,
 				0CB54BBE1AAC43B000436D2F /* InstagramTag.m in Sources */,
 				0CB54BB31AAC43B000436D2F /* AFURLRequestSerialization.m in Sources */,
@@ -565,6 +573,12 @@
 					"$(PROJECT_DIR)/Social",
 					Network,
 					Analyzer,
+					"$(PROJECT_DIR)/Social",
+					Network,
+					Analyzer,
+					"$(PROJECT_DIR)/Social",
+					Network,
+					Analyzer,
 				);
 				INFOPLIST_FILE = "Social Network Analyzer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -581,6 +595,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Social",
+					Network,
+					Analyzer,
+					"$(PROJECT_DIR)/Social",
+					Network,
+					Analyzer,
 					"$(PROJECT_DIR)/Social",
 					Network,
 					Analyzer,
