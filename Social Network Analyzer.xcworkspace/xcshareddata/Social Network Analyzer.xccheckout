@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>295FF4B9-57C3-41DC-A059-35981D2AEC59</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Social Network Analyzer</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>1F5EA5187F6AC9FA0584CEBA82D3058CCD7A517A</key>
+		<string>https://github.com/cschubiner/Social-Network-Analyzer.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Social Network Analyzer.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>1F5EA5187F6AC9FA0584CEBA82D3058CCD7A517A</key>
+		<string>..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/cschubiner/Social-Network-Analyzer.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>1F5EA5187F6AC9FA0584CEBA82D3058CCD7A517A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>1F5EA5187F6AC9FA0584CEBA82D3058CCD7A517A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Social%20Network%20Analyzer</string>
+		</dict>
+	</array>
+</dict>
+</plist>
