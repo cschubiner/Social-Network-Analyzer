@@ -15,7 +15,29 @@ class PeopleTableViewController: UITableViewController {
         var numLikes = 0
     }
     
+    enum SocialNetwork {
+        case Facebook
+        case Instagram
+    }
+    
+    
+    @IBAction func toggleSocialNetwork(sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            currentSocialNetwork = SocialNetwork.Facebook
+        case 1:
+            currentSocialNetwork = SocialNetwork.Instagram
+        default:
+            break
+        }
+        
+        self.tableView.reloadData()
+    }
+    
+    var currentSocialNetwork: SocialNetwork = SocialNetwork.Facebook
+    
     var instagramLikers: [PostLiker] = []
+    var facebookLikers: [PostLiker] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +56,6 @@ class PeopleTableViewController: UITableViewController {
                 
                 for post: InstagramMedia in posts {
                     for user in post.likes {
-                        
                         let user = user as InstagramUser
                         let userName = user.username
                         if (instagramLikersDict[userName] == nil) {
@@ -50,13 +71,11 @@ class PeopleTableViewController: UITableViewController {
                 self.instagramLikers = [PostLiker](instagramLikersDict.values)
                 self.instagramLikers.sort({$0.numLikes > $1.numLikes})
                 
-
+                
                 dispatch_async(dispatch_get_main_queue(), {
                     self.tableView.reloadData()
                 })
             }
-            
-            
         })
     }
     
@@ -68,29 +87,34 @@ class PeopleTableViewController: UITableViewController {
     // MARK: - Table view data source
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Potentially incomplete method implementation.
         // Return the number of sections.
-        return 2
+        return 1
     }
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete method implementation.
-        // Return the number of rows in the section.
-        if (section == 0) {
-            return 0;
+        if (currentSocialNetwork == SocialNetwork.Facebook) {
+            return facebookLikers.count
         }
-        return instagramLikers.count
+        
+        if (currentSocialNetwork == SocialNetwork.Instagram) {
+            return instagramLikers.count
+        }
+        return 0
     }
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("peopleCell", forIndexPath: indexPath) as UITableViewCell
         
-        if (indexPath.section == 1) {
+        if (currentSocialNetwork == SocialNetwork.Facebook) {
+            
+        }
+        
+        if (currentSocialNetwork == SocialNetwork.Instagram) {
             //instagram
             
-               let liker = self.instagramLikers[indexPath.row] as PostLiker
-               cell.textLabel?.text = liker.userName + " - " + String(liker.numLikes) + " likes"
+            let liker = self.instagramLikers[indexPath.row] as PostLiker
+            cell.textLabel?.text = liker.userName + " - " + String(liker.numLikes) + " likes"
             
         }
         

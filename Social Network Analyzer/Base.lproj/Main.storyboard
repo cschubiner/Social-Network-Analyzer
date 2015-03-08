@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fUZ-2b-0Re">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="fUZ-2b-0Re">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -263,6 +263,9 @@
                                     <segment title="FB" width="50"/>
                                     <segment title="IG" width="50"/>
                                 </segments>
+                                <connections>
+                                    <action selector="toggleSocialNetwork:" destination="I3F-HH-Cwk" eventType="valueChanged" id="PLM-dw-oUN"/>
+                                </connections>
                             </segmentedControl>
                         </barButtonItem>
                     </navigationItem>
