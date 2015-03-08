@@ -7,11 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E905C1CC1AAC33F800160A1E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E905C1CB1AAC33F800160A1E /* FacebookSDK.framework */; };
 		E905C1CE1AAC344900160A1E /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905C1CD1AAC344900160A1E /* LoadingViewController.swift */; };
+		E905C1D01AAC408500160A1E /* GraphsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905C1CF1AAC408500160A1E /* GraphsViewController.swift */; };
+		E905C1D21AAC42EF00160A1E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E905C1D11AAC42EF00160A1E /* FacebookSDK.framework */; };
 		E975FE1F1AAC31F400C74B14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975FE1E1AAC31F400C74B14 /* AppDelegate.swift */; };
-		E975FE211AAC31F400C74B14 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975FE201AAC31F400C74B14 /* FirstViewController.swift */; };
-		E975FE231AAC31F400C74B14 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975FE221AAC31F400C74B14 /* SecondViewController.swift */; };
 		E975FE261AAC31F400C74B14 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E975FE241AAC31F400C74B14 /* Main.storyboard */; };
 		E975FE281AAC31F400C74B14 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E975FE271AAC31F400C74B14 /* Images.xcassets */; };
 		E975FE2B1AAC31F400C74B14 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E975FE291AAC31F400C74B14 /* LaunchScreen.xib */; };
@@ -29,13 +28,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		E905C1CB1AAC33F800160A1E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "Social Network Analyzer/FacebookSDK.framework"; sourceTree = "<group>"; };
 		E905C1CD1AAC344900160A1E /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
+		E905C1CF1AAC408500160A1E /* GraphsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphsViewController.swift; sourceTree = "<group>"; };
+		E905C1D11AAC42EF00160A1E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "Social Network Analyzer/FacebookSDK.framework"; sourceTree = "<group>"; };
 		E975FE191AAC31F400C74B14 /* Social Network Analyzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social Network Analyzer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E975FE1D1AAC31F400C74B14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E975FE1E1AAC31F400C74B14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E975FE201AAC31F400C74B14 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		E975FE221AAC31F400C74B14 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		E975FE251AAC31F400C74B14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E975FE271AAC31F400C74B14 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		E975FE2A1AAC31F400C74B14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -50,7 +48,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E905C1CC1AAC33F800160A1E /* FacebookSDK.framework in Frameworks */,
+				E905C1D21AAC42EF00160A1E /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +65,7 @@
 		E905C1CA1AAC33C200160A1E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E905C1CB1AAC33F800160A1E /* FacebookSDK.framework */,
+				E905C1D11AAC42EF00160A1E /* FacebookSDK.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -95,14 +93,13 @@
 			isa = PBXGroup;
 			children = (
 				E975FE1E1AAC31F400C74B14 /* AppDelegate.swift */,
-				E975FE201AAC31F400C74B14 /* FirstViewController.swift */,
-				E975FE221AAC31F400C74B14 /* SecondViewController.swift */,
 				E975FE241AAC31F400C74B14 /* Main.storyboard */,
 				E975FE271AAC31F400C74B14 /* Images.xcassets */,
 				E975FE291AAC31F400C74B14 /* LaunchScreen.xib */,
 				E975FE1C1AAC31F400C74B14 /* Supporting Files */,
 				E975FE421AAC326000C74B14 /* Social Network Analyzer-Bridging-Header.h */,
 				E905C1CD1AAC344900160A1E /* LoadingViewController.swift */,
+				E905C1CF1AAC408500160A1E /* GraphsViewController.swift */,
 			);
 			path = "Social Network Analyzer";
 			sourceTree = "<group>";
@@ -232,9 +229,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E975FE231AAC31F400C74B14 /* SecondViewController.swift in Sources */,
 				E975FE1F1AAC31F400C74B14 /* AppDelegate.swift in Sources */,
-				E975FE211AAC31F400C74B14 /* FirstViewController.swift in Sources */,
+				E905C1D01AAC408500160A1E /* GraphsViewController.swift in Sources */,
 				E905C1CE1AAC344900160A1E /* LoadingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,6 +365,9 @@
 					"$(PROJECT_DIR)/Social",
 					Network,
 					Analyzer,
+					"$(PROJECT_DIR)/Social",
+					Network,
+					Analyzer,
 				);
 				INFOPLIST_FILE = "Social Network Analyzer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -385,6 +384,9 @@
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Social",
+					Network,
+					Analyzer,
 					"$(PROJECT_DIR)/Social",
 					Network,
 					Analyzer,
