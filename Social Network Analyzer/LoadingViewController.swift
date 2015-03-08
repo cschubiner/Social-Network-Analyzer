@@ -14,14 +14,29 @@ class LoadingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         activity.startAnimating()
-        FBSession.openActiveSessionWithReadPermissions(["public_profile, user_photos, read_stream"], allowLoginUI: true, completionHandler: { session, state, error in
-            println("permissions: \(FBSession.activeSession().accessTokenData.permissions)")
-            dispatch_async(dispatch_get_main_queue()) {
-                self.performSegueWithIdentifier("success", sender: nil)
-            }
-            
-        })
-
+        
         // Do any additional setup after loading the view.
+    }
+    
+    @IBAction func loginInstagramButton(sender: UIButton) {
+        dispatch_async(dispatch_get_main_queue()) {
+            sender.enabled = false;
+            self.performSegueWithIdentifier("loadingToInstagramController", sender: nil)
+        }
+    }
+    
+    @IBAction func loginFacebookButton(sender: UIButton) {
+        FBSession.openActiveSessionWithReadPermissions(["public_profile, user_photos, read_stream"], allowLoginUI: true, completionHandler: { session, state, error in
+            sender.enabled = false;
+            println("permissions: \(FBSession.activeSession().accessTokenData.permissions)")
+        })
+        
+
+    }
+    
+    @IBAction func skipLoginButton(sender: UIButton) {
+        dispatch_async(dispatch_get_main_queue()) {
+            self.performSegueWithIdentifier("loadingToTabBarController", sender: nil)
+        }
     }
 }
