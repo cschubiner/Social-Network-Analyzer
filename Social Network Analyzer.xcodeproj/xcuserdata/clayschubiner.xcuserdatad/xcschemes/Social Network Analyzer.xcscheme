@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0CD60B761AAC2648006E5CAB"
+               BlueprintIdentifier = "0C364F601AAC2E5A0090E482"
                BuildableName = "Social Network Analyzer.app"
                BlueprintName = "Social Network Analyzer"
                ReferencedContainer = "container:Social Network Analyzer.xcodeproj">
@@ -28,7 +28,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0CD60B8D1AAC2648006E5CAB"
+               BlueprintIdentifier = "0C364F771AAC2E5A0090E482"
                BuildableName = "Social Network AnalyzerTests.xctest"
                BlueprintName = "Social Network AnalyzerTests"
                ReferencedContainer = "container:Social Network Analyzer.xcodeproj">
@@ -46,7 +46,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0CD60B8D1AAC2648006E5CAB"
+               BlueprintIdentifier = "0C364F771AAC2E5A0090E482"
                BuildableName = "Social Network AnalyzerTests.xctest"
                BlueprintName = "Social Network AnalyzerTests"
                ReferencedContainer = "container:Social Network Analyzer.xcodeproj">
@@ -56,7 +56,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0CD60B761AAC2648006E5CAB"
+            BlueprintIdentifier = "0C364F601AAC2E5A0090E482"
             BuildableName = "Social Network Analyzer.app"
             BlueprintName = "Social Network Analyzer"
             ReferencedContainer = "container:Social Network Analyzer.xcodeproj">
@@ -75,7 +75,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0CD60B761AAC2648006E5CAB"
+            BlueprintIdentifier = "0C364F601AAC2E5A0090E482"
             BuildableName = "Social Network Analyzer.app"
             BlueprintName = "Social Network Analyzer"
             ReferencedContainer = "container:Social Network Analyzer.xcodeproj">
@@ -93,7 +93,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0CD60B761AAC2648006E5CAB"
+            BlueprintIdentifier = "0C364F601AAC2E5A0090E482"
             BuildableName = "Social Network Analyzer.app"
             BlueprintName = "Social Network Analyzer"
             ReferencedContainer = "container:Social Network Analyzer.xcodeproj">

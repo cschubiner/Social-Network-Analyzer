@@ -7,51 +7,48 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0CD60B7D1AAC2648006E5CAB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD60B7C1AAC2648006E5CAB /* AppDelegate.swift */; };
-		0CD60B7F1AAC2648006E5CAB /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD60B7E1AAC2648006E5CAB /* FirstViewController.swift */; };
-		0CD60B811AAC2648006E5CAB /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD60B801AAC2648006E5CAB /* SecondViewController.swift */; };
-		0CD60B841AAC2648006E5CAB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CD60B821AAC2648006E5CAB /* Main.storyboard */; };
-		0CD60B861AAC2648006E5CAB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CD60B851AAC2648006E5CAB /* Images.xcassets */; };
-		0CD60B891AAC2648006E5CAB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CD60B871AAC2648006E5CAB /* LaunchScreen.xib */; };
-		0CD60B951AAC2648006E5CAB /* Social_Network_AnalyzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CD60B941AAC2648006E5CAB /* Social_Network_AnalyzerTests.swift */; };
-		1C5399AF7918EEAAD51D408B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCBBED5274AD88836A453522 /* libPods.a */; };
+		0C364F671AAC2E5A0090E482 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C364F661AAC2E5A0090E482 /* AppDelegate.swift */; };
+		0C364F691AAC2E5A0090E482 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C364F681AAC2E5A0090E482 /* FirstViewController.swift */; };
+		0C364F6B1AAC2E5A0090E482 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C364F6A1AAC2E5A0090E482 /* SecondViewController.swift */; };
+		0C364F6E1AAC2E5A0090E482 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C364F6C1AAC2E5A0090E482 /* Main.storyboard */; };
+		0C364F701AAC2E5A0090E482 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0C364F6F1AAC2E5A0090E482 /* Images.xcassets */; };
+		0C364F731AAC2E5A0090E482 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C364F711AAC2E5A0090E482 /* LaunchScreen.xib */; };
+		0C364F7F1AAC2E5A0090E482 /* Social_Network_AnalyzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C364F7E1AAC2E5A0090E482 /* Social_Network_AnalyzerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		0CD60B8F1AAC2648006E5CAB /* PBXContainerItemProxy */ = {
+		0C364F791AAC2E5A0090E482 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 0CD60B6F1AAC2648006E5CAB /* Project object */;
+			containerPortal = 0C364F591AAC2E5A0090E482 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0CD60B761AAC2648006E5CAB;
+			remoteGlobalIDString = 0C364F601AAC2E5A0090E482;
 			remoteInfo = "Social Network Analyzer";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0CD60B771AAC2648006E5CAB /* Social Network Analyzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social Network Analyzer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0CD60B7B1AAC2648006E5CAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0CD60B7C1AAC2648006E5CAB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0CD60B7E1AAC2648006E5CAB /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		0CD60B801AAC2648006E5CAB /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
-		0CD60B831AAC2648006E5CAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0CD60B851AAC2648006E5CAB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		0CD60B881AAC2648006E5CAB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		0CD60B8E1AAC2648006E5CAB /* Social Network AnalyzerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Social Network AnalyzerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0CD60B931AAC2648006E5CAB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0CD60B941AAC2648006E5CAB /* Social_Network_AnalyzerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social_Network_AnalyzerTests.swift; sourceTree = "<group>"; };
-		FCBBED5274AD88836A453522 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C364F611AAC2E5A0090E482 /* Social Network Analyzer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Social Network Analyzer.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C364F651AAC2E5A0090E482 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C364F661AAC2E5A0090E482 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0C364F681AAC2E5A0090E482 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		0C364F6A1AAC2E5A0090E482 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		0C364F6D1AAC2E5A0090E482 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0C364F6F1AAC2E5A0090E482 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0C364F721AAC2E5A0090E482 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		0C364F781AAC2E5A0090E482 /* Social Network AnalyzerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Social Network AnalyzerTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0C364F7D1AAC2E5A0090E482 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0C364F7E1AAC2E5A0090E482 /* Social_Network_AnalyzerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Social_Network_AnalyzerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0CD60B741AAC2648006E5CAB /* Frameworks */ = {
+		0C364F5E1AAC2E5A0090E482 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1C5399AF7918EEAAD51D408B /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0CD60B8B1AAC2648006E5CAB /* Frameworks */ = {
+		0C364F751AAC2E5A0090E482 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -61,84 +58,73 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0CD60B6E1AAC2648006E5CAB = {
+		0C364F581AAC2E5A0090E482 = {
 			isa = PBXGroup;
 			children = (
-				0CD60B791AAC2648006E5CAB /* Social Network Analyzer */,
-				0CD60B911AAC2648006E5CAB /* Social Network AnalyzerTests */,
-				0CD60B781AAC2648006E5CAB /* Products */,
-				2203811740A257EF8640BC8E /* Frameworks */,
+				0C364F631AAC2E5A0090E482 /* Social Network Analyzer */,
+				0C364F7B1AAC2E5A0090E482 /* Social Network AnalyzerTests */,
+				0C364F621AAC2E5A0090E482 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		0CD60B781AAC2648006E5CAB /* Products */ = {
+		0C364F621AAC2E5A0090E482 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0CD60B771AAC2648006E5CAB /* Social Network Analyzer.app */,
-				0CD60B8E1AAC2648006E5CAB /* Social Network AnalyzerTests.xctest */,
+				0C364F611AAC2E5A0090E482 /* Social Network Analyzer.app */,
+				0C364F781AAC2E5A0090E482 /* Social Network AnalyzerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0CD60B791AAC2648006E5CAB /* Social Network Analyzer */ = {
+		0C364F631AAC2E5A0090E482 /* Social Network Analyzer */ = {
 			isa = PBXGroup;
 			children = (
-				0CD60B7C1AAC2648006E5CAB /* AppDelegate.swift */,
-				0CD60B7E1AAC2648006E5CAB /* FirstViewController.swift */,
-				0CD60B801AAC2648006E5CAB /* SecondViewController.swift */,
-				0CD60B821AAC2648006E5CAB /* Main.storyboard */,
-				0CD60B851AAC2648006E5CAB /* Images.xcassets */,
-				0CD60B871AAC2648006E5CAB /* LaunchScreen.xib */,
-				0CD60B7A1AAC2648006E5CAB /* Supporting Files */,
+				0C364F661AAC2E5A0090E482 /* AppDelegate.swift */,
+				0C364F681AAC2E5A0090E482 /* FirstViewController.swift */,
+				0C364F6A1AAC2E5A0090E482 /* SecondViewController.swift */,
+				0C364F6C1AAC2E5A0090E482 /* Main.storyboard */,
+				0C364F6F1AAC2E5A0090E482 /* Images.xcassets */,
+				0C364F711AAC2E5A0090E482 /* LaunchScreen.xib */,
+				0C364F641AAC2E5A0090E482 /* Supporting Files */,
 			);
 			path = "Social Network Analyzer";
 			sourceTree = "<group>";
 		};
-		0CD60B7A1AAC2648006E5CAB /* Supporting Files */ = {
+		0C364F641AAC2E5A0090E482 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0CD60B7B1AAC2648006E5CAB /* Info.plist */,
+				0C364F651AAC2E5A0090E482 /* Info.plist */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		0CD60B911AAC2648006E5CAB /* Social Network AnalyzerTests */ = {
+		0C364F7B1AAC2E5A0090E482 /* Social Network AnalyzerTests */ = {
 			isa = PBXGroup;
 			children = (
-				0CD60B941AAC2648006E5CAB /* Social_Network_AnalyzerTests.swift */,
-				0CD60B921AAC2648006E5CAB /* Supporting Files */,
+				0C364F7E1AAC2E5A0090E482 /* Social_Network_AnalyzerTests.swift */,
+				0C364F7C1AAC2E5A0090E482 /* Supporting Files */,
 			);
 			path = "Social Network AnalyzerTests";
 			sourceTree = "<group>";
 		};
-		0CD60B921AAC2648006E5CAB /* Supporting Files */ = {
+		0C364F7C1AAC2E5A0090E482 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				0CD60B931AAC2648006E5CAB /* Info.plist */,
+				0C364F7D1AAC2E5A0090E482 /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		2203811740A257EF8640BC8E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				FCBBED5274AD88836A453522 /* libPods.a */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0CD60B761AAC2648006E5CAB /* Social Network Analyzer */ = {
+		0C364F601AAC2E5A0090E482 /* Social Network Analyzer */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0CD60B981AAC2648006E5CAB /* Build configuration list for PBXNativeTarget "Social Network Analyzer" */;
+			buildConfigurationList = 0C364F821AAC2E5A0090E482 /* Build configuration list for PBXNativeTarget "Social Network Analyzer" */;
 			buildPhases = (
-				D76BD98AD06179071D6AA5BF /* Check Pods Manifest.lock */,
-				0CD60B731AAC2648006E5CAB /* Sources */,
-				0CD60B741AAC2648006E5CAB /* Frameworks */,
-				0CD60B751AAC2648006E5CAB /* Resources */,
-				4BF5CC8447BF1C417DCBD168 /* Copy Pods Resources */,
+				0C364F5D1AAC2E5A0090E482 /* Sources */,
+				0C364F5E1AAC2E5A0090E482 /* Frameworks */,
+				0C364F5F1AAC2E5A0090E482 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -146,46 +132,46 @@
 			);
 			name = "Social Network Analyzer";
 			productName = "Social Network Analyzer";
-			productReference = 0CD60B771AAC2648006E5CAB /* Social Network Analyzer.app */;
+			productReference = 0C364F611AAC2E5A0090E482 /* Social Network Analyzer.app */;
 			productType = "com.apple.product-type.application";
 		};
-		0CD60B8D1AAC2648006E5CAB /* Social Network AnalyzerTests */ = {
+		0C364F771AAC2E5A0090E482 /* Social Network AnalyzerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0CD60B9B1AAC2648006E5CAB /* Build configuration list for PBXNativeTarget "Social Network AnalyzerTests" */;
+			buildConfigurationList = 0C364F851AAC2E5A0090E482 /* Build configuration list for PBXNativeTarget "Social Network AnalyzerTests" */;
 			buildPhases = (
-				0CD60B8A1AAC2648006E5CAB /* Sources */,
-				0CD60B8B1AAC2648006E5CAB /* Frameworks */,
-				0CD60B8C1AAC2648006E5CAB /* Resources */,
+				0C364F741AAC2E5A0090E482 /* Sources */,
+				0C364F751AAC2E5A0090E482 /* Frameworks */,
+				0C364F761AAC2E5A0090E482 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				0CD60B901AAC2648006E5CAB /* PBXTargetDependency */,
+				0C364F7A1AAC2E5A0090E482 /* PBXTargetDependency */,
 			);
 			name = "Social Network AnalyzerTests";
 			productName = "Social Network AnalyzerTests";
-			productReference = 0CD60B8E1AAC2648006E5CAB /* Social Network AnalyzerTests.xctest */;
+			productReference = 0C364F781AAC2E5A0090E482 /* Social Network AnalyzerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0CD60B6F1AAC2648006E5CAB /* Project object */ = {
+		0C364F591AAC2E5A0090E482 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Clayton Schubiner";
 				TargetAttributes = {
-					0CD60B761AAC2648006E5CAB = {
+					0C364F601AAC2E5A0090E482 = {
 						CreatedOnToolsVersion = 6.1.1;
 					};
-					0CD60B8D1AAC2648006E5CAB = {
+					0C364F771AAC2E5A0090E482 = {
 						CreatedOnToolsVersion = 6.1.1;
-						TestTargetID = 0CD60B761AAC2648006E5CAB;
+						TestTargetID = 0C364F601AAC2E5A0090E482;
 					};
 				};
 			};
-			buildConfigurationList = 0CD60B721AAC2648006E5CAB /* Build configuration list for PBXProject "Social Network Analyzer" */;
+			buildConfigurationList = 0C364F5C1AAC2E5A0090E482 /* Build configuration list for PBXProject "Social Network Analyzer" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -193,29 +179,29 @@
 				en,
 				Base,
 			);
-			mainGroup = 0CD60B6E1AAC2648006E5CAB;
-			productRefGroup = 0CD60B781AAC2648006E5CAB /* Products */;
+			mainGroup = 0C364F581AAC2E5A0090E482;
+			productRefGroup = 0C364F621AAC2E5A0090E482 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0CD60B761AAC2648006E5CAB /* Social Network Analyzer */,
-				0CD60B8D1AAC2648006E5CAB /* Social Network AnalyzerTests */,
+				0C364F601AAC2E5A0090E482 /* Social Network Analyzer */,
+				0C364F771AAC2E5A0090E482 /* Social Network AnalyzerTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0CD60B751AAC2648006E5CAB /* Resources */ = {
+		0C364F5F1AAC2E5A0090E482 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CD60B841AAC2648006E5CAB /* Main.storyboard in Resources */,
-				0CD60B891AAC2648006E5CAB /* LaunchScreen.xib in Resources */,
-				0CD60B861AAC2648006E5CAB /* Images.xcassets in Resources */,
+				0C364F6E1AAC2E5A0090E482 /* Main.storyboard in Resources */,
+				0C364F731AAC2E5A0090E482 /* LaunchScreen.xib in Resources */,
+				0C364F701AAC2E5A0090E482 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0CD60B8C1AAC2648006E5CAB /* Resources */ = {
+		0C364F761AAC2E5A0090E482 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -224,81 +210,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
-/* Begin PBXShellScriptBuildPhase section */
-		4BF5CC8447BF1C417DCBD168 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D76BD98AD06179071D6AA5BF /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
-
 /* Begin PBXSourcesBuildPhase section */
-		0CD60B731AAC2648006E5CAB /* Sources */ = {
+		0C364F5D1AAC2E5A0090E482 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CD60B811AAC2648006E5CAB /* SecondViewController.swift in Sources */,
-				0CD60B7D1AAC2648006E5CAB /* AppDelegate.swift in Sources */,
-				0CD60B7F1AAC2648006E5CAB /* FirstViewController.swift in Sources */,
+				0C364F6B1AAC2E5A0090E482 /* SecondViewController.swift in Sources */,
+				0C364F671AAC2E5A0090E482 /* AppDelegate.swift in Sources */,
+				0C364F691AAC2E5A0090E482 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		0CD60B8A1AAC2648006E5CAB /* Sources */ = {
+		0C364F741AAC2E5A0090E482 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0CD60B951AAC2648006E5CAB /* Social_Network_AnalyzerTests.swift in Sources */,
+				0C364F7F1AAC2E5A0090E482 /* Social_Network_AnalyzerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		0CD60B901AAC2648006E5CAB /* PBXTargetDependency */ = {
+		0C364F7A1AAC2E5A0090E482 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 0CD60B761AAC2648006E5CAB /* Social Network Analyzer */;
-			targetProxy = 0CD60B8F1AAC2648006E5CAB /* PBXContainerItemProxy */;
+			target = 0C364F601AAC2E5A0090E482 /* Social Network Analyzer */;
+			targetProxy = 0C364F791AAC2E5A0090E482 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0CD60B821AAC2648006E5CAB /* Main.storyboard */ = {
+		0C364F6C1AAC2E5A0090E482 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0CD60B831AAC2648006E5CAB /* Base */,
+				0C364F6D1AAC2E5A0090E482 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		0CD60B871AAC2648006E5CAB /* LaunchScreen.xib */ = {
+		0C364F711AAC2E5A0090E482 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0CD60B881AAC2648006E5CAB /* Base */,
+				0C364F721AAC2E5A0090E482 /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
@@ -306,7 +259,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		0CD60B961AAC2648006E5CAB /* Debug */ = {
+		0C364F801AAC2E5A0090E482 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -349,7 +302,7 @@
 			};
 			name = Debug;
 		};
-		0CD60B971AAC2648006E5CAB /* Release */ = {
+		0C364F811AAC2E5A0090E482 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -385,7 +338,7 @@
 			};
 			name = Release;
 		};
-		0CD60B991AAC2648006E5CAB /* Debug */ = {
+		0C364F831AAC2E5A0090E482 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -395,7 +348,7 @@
 			};
 			name = Debug;
 		};
-		0CD60B9A1AAC2648006E5CAB /* Release */ = {
+		0C364F841AAC2E5A0090E482 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -405,7 +358,7 @@
 			};
 			name = Release;
 		};
-		0CD60B9C1AAC2648006E5CAB /* Debug */ = {
+		0C364F861AAC2E5A0090E482 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -424,7 +377,7 @@
 			};
 			name = Debug;
 		};
-		0CD60B9D1AAC2648006E5CAB /* Release */ = {
+		0C364F871AAC2E5A0090E482 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -442,34 +395,32 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0CD60B721AAC2648006E5CAB /* Build configuration list for PBXProject "Social Network Analyzer" */ = {
+		0C364F5C1AAC2E5A0090E482 /* Build configuration list for PBXProject "Social Network Analyzer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0CD60B961AAC2648006E5CAB /* Debug */,
-				0CD60B971AAC2648006E5CAB /* Release */,
+				0C364F801AAC2E5A0090E482 /* Debug */,
+				0C364F811AAC2E5A0090E482 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0CD60B981AAC2648006E5CAB /* Build configuration list for PBXNativeTarget "Social Network Analyzer" */ = {
+		0C364F821AAC2E5A0090E482 /* Build configuration list for PBXNativeTarget "Social Network Analyzer" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0CD60B991AAC2648006E5CAB /* Debug */,
-				0CD60B9A1AAC2648006E5CAB /* Release */,
+				0C364F831AAC2E5A0090E482 /* Debug */,
+				0C364F841AAC2E5A0090E482 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
-		0CD60B9B1AAC2648006E5CAB /* Build configuration list for PBXNativeTarget "Social Network AnalyzerTests" */ = {
+		0C364F851AAC2E5A0090E482 /* Build configuration list for PBXNativeTarget "Social Network AnalyzerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0CD60B9C1AAC2648006E5CAB /* Debug */,
-				0CD60B9D1AAC2648006E5CAB /* Release */,
+				0C364F861AAC2E5A0090E482 /* Debug */,
+				0C364F871AAC2E5A0090E482 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0CD60B6F1AAC2648006E5CAB /* Project object */;
+	rootObject = 0C364F591AAC2E5A0090E482 /* Project object */;
 }
