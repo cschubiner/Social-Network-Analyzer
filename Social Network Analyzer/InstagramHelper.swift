@@ -22,7 +22,6 @@ struct InstagramHelper {
             })
             }, failure: { error in
                 println("instagram failed");
-                
         })
     }
 }

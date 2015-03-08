@@ -17,6 +17,13 @@ struct FbHelper {
         FBRequestConnection.startWithGraphPath("/me/feed", completionHandler: dataLoaded)
     }
     
+    static func facebookIDToName(fbID : Int, callback: (String) -> ()) {
+        FBRequestConnection.startWithGraphPath("\(fbID)", completionHandler: { (connection, result, error) in
+            var resultDict = result as NSDictionary
+            callback(resultDict["name"] as String)
+        })
+    }
+    
     static func registerCallback(callback: ([FbPost]) -> ()) -> Int {
         let id = nextCallbackId
         nextCallbackId += 1
