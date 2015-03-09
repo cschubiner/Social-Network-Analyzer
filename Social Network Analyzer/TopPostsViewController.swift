@@ -63,7 +63,7 @@ class TopPostsViewController: UITableViewController {
 
             var sortedPosts = self.topFBPosts + allPosts
             sortedPosts.sort { $1.numLikes < $0.numLikes }
-            if sortedPosts.count < self.NUM_TOP_POSTS {
+            if sortedPosts.count <= self.NUM_TOP_POSTS {
                 self.topFBPosts = sortedPosts
             } else {
                 self.topFBPosts = Array(sortedPosts[0...self.NUM_TOP_POSTS])
