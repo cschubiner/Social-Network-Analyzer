@@ -39,7 +39,7 @@ class HoursHistogramView: UIView {
                             height: height
                         )
                         let histoView = UIView(frame: histo)
-                        histoView.backgroundColor = UIColor.blueColor()
+                        histoView.backgroundColor = UIColor(red: 0.161, green: 0.502, blue: 0.725, alpha: 1.0)
                         addSubview(histoView)
                     }
                 }
