@@ -306,7 +306,7 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="ThC-0O-wbr" kind="relationship" relationship="rootViewController" id="HaE-XK-mEo"/>
+                        <segue destination="ApX-4Z-ueZ" kind="relationship" relationship="rootViewController" id="XYt-oq-ity"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4k-wv-4wQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -314,139 +314,144 @@
             <point key="canvasLocation" x="740" y="54"/>
         </scene>
         <!--Graphs-->
-        <scene sceneID="u1l-cO-Chi">
+        <scene sceneID="2Mn-H6-7Vv">
             <objects>
-                <viewController id="ThC-0O-wbr" customClass="GraphsViewController" customModule="Social_Network_Analyzer" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Kh0-1o-FcH"/>
-                        <viewControllerLayoutGuide type="bottom" id="aha-pp-BQE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="eN3-Xd-f8L">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="1000"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6wZ-ne-QR6">
-                                <rect key="frame" x="16" y="64" width="568" height="887"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cGc-RA-Dvb">
-                                        <rect key="frame" x="0.0" y="0.0" width="568" height="511.5"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of posts, by hour" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eeQ-HX-Tw1">
-                                                <rect key="frame" x="0.0" y="8" width="196.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ss9-dO-GB6" customClass="HoursHistogramView" customModule="Social_Network_Analyzer" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="36" width="568" height="200"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="200" id="gic-3h-mes"/>
-                                                </constraints>
-                                            </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9U-0Z-0du">
-                                                <rect key="frame" x="0.0" y="238" width="28.5" height="13.5"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average likes per post, by hour of post" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hmd-nE-F5o">
-                                                <rect key="frame" x="0.0" y="259" width="296.5" height="20.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CMQ-Tj-khn" customClass="HoursHistogramView" customModule="Social_Network_Analyzer" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="288" width="568" height="200"/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12pm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PqA-4x-YUq">
-                                                <rect key="frame" x="270" y="238" width="29.5" height="13.5"/>
-                                                <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <constraints>
-                                            <constraint firstItem="Q9U-0Z-0du" firstAttribute="leading" secondItem="cGc-RA-Dvb" secondAttribute="leading" id="3SR-Yv-KEQ"/>
-                                            <constraint firstItem="CMQ-Tj-khn" firstAttribute="leading" secondItem="cGc-RA-Dvb" secondAttribute="leading" id="4hA-oM-VBE"/>
-                                            <constraint firstItem="Ss9-dO-GB6" firstAttribute="leading" secondItem="cGc-RA-Dvb" secondAttribute="leading" id="5eZ-FB-Xm4"/>
-                                            <constraint firstItem="hmd-nE-F5o" firstAttribute="top" secondItem="Ss9-dO-GB6" secondAttribute="bottom" constant="8" id="5vX-FA-TAF"/>
-                                            <constraint firstItem="PqA-4x-YUq" firstAttribute="baseline" secondItem="Q9U-0Z-0du" secondAttribute="baseline" id="94e-If-m22"/>
-                                            <constraint firstItem="Q9U-0Z-0du" firstAttribute="top" secondItem="Ss9-dO-GB6" secondAttribute="bottom" constant="2" id="9xh-MU-FMd"/>
-                                            <constraint firstAttribute="bottom" secondItem="CMQ-Tj-khn" secondAttribute="bottom" constant="8" id="F4M-EH-yno"/>
-                                            <constraint firstItem="hmd-nE-F5o" firstAttribute="leading" secondItem="cGc-RA-Dvb" secondAttribute="leading" id="HTG-TG-sis"/>
-                                            <constraint firstAttribute="trailing" secondItem="CMQ-Tj-khn" secondAttribute="trailing" id="KPT-W7-026"/>
-                                            <constraint firstItem="Ss9-dO-GB6" firstAttribute="top" secondItem="eeQ-HX-Tw1" secondAttribute="bottom" constant="8" id="QIO-f0-xoD"/>
-                                            <constraint firstItem="CMQ-Tj-khn" firstAttribute="height" secondItem="Ss9-dO-GB6" secondAttribute="height" id="R70-xF-fy2"/>
-                                            <constraint firstItem="eeQ-HX-Tw1" firstAttribute="leading" secondItem="cGc-RA-Dvb" secondAttribute="leading" id="WVv-FM-iVT"/>
-                                            <constraint firstItem="hmd-nE-F5o" firstAttribute="top" secondItem="Q9U-0Z-0du" secondAttribute="bottom" constant="8" id="byo-cv-sEa"/>
-                                            <constraint firstAttribute="trailing" secondItem="Ss9-dO-GB6" secondAttribute="trailing" id="icj-8R-AzV"/>
-                                            <constraint firstItem="CMQ-Tj-khn" firstAttribute="top" secondItem="hmd-nE-F5o" secondAttribute="bottom" constant="8" id="nad-BB-5lX"/>
-                                            <constraint firstItem="eeQ-HX-Tw1" firstAttribute="top" secondItem="cGc-RA-Dvb" secondAttribute="top" constant="8" id="rbm-jk-7sw"/>
-                                            <constraint firstItem="PqA-4x-YUq" firstAttribute="centerX" secondItem="Ss9-dO-GB6" secondAttribute="centerX" constant="1" id="xjA-38-eb9"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="5vX-FA-TAF"/>
-                                                <exclude reference="F4M-EH-yno"/>
-                                            </mask>
-                                        </variation>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12pm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="an0-FD-GWw">
-                                        <rect key="frame" x="269" y="490" width="29.5" height="13.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="23h-f3-eHB">
-                                        <rect key="frame" x="0.0" y="490" width="28.5" height="13.5"/>
-                                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
-                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="cGc-RA-Dvb" secondAttribute="trailing" id="Om3-IH-Nrq"/>
-                                    <constraint firstItem="23h-f3-eHB" firstAttribute="leading" secondItem="6wZ-ne-QR6" secondAttribute="leading" id="Q3G-zj-7V8"/>
-                                    <constraint firstItem="cGc-RA-Dvb" firstAttribute="leading" secondItem="6wZ-ne-QR6" secondAttribute="leading" id="TLM-hC-ri3"/>
-                                    <constraint firstAttribute="bottom" secondItem="cGc-RA-Dvb" secondAttribute="bottom" id="ie9-UQ-YNK"/>
-                                    <constraint firstItem="CMQ-Tj-khn" firstAttribute="centerX" secondItem="an0-FD-GWw" secondAttribute="centerX" id="lxR-El-p3c"/>
-                                    <constraint firstItem="cGc-RA-Dvb" firstAttribute="width" secondItem="6wZ-ne-QR6" secondAttribute="width" id="qHa-Pm-L1v"/>
-                                    <constraint firstItem="23h-f3-eHB" firstAttribute="baseline" secondItem="an0-FD-GWw" secondAttribute="baseline" id="u6f-6e-uzj"/>
-                                    <constraint firstItem="cGc-RA-Dvb" firstAttribute="bottom" secondItem="23h-f3-eHB" secondAttribute="bottom" constant="8" id="ze8-8Y-fX2"/>
-                                    <constraint firstItem="23h-f3-eHB" firstAttribute="top" secondItem="CMQ-Tj-khn" secondAttribute="bottom" constant="2" id="zeZ-B0-AMx"/>
-                                    <constraint firstItem="cGc-RA-Dvb" firstAttribute="top" secondItem="6wZ-ne-QR6" secondAttribute="top" id="zwG-Ch-mVK"/>
-                                </constraints>
-                            </scrollView>
-                        </subviews>
+                <tableViewController id="ApX-4Z-ueZ" customClass="GraphsViewController" customModule="Social_Network_Analyzer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="269" sectionHeaderHeight="22" sectionFooterHeight="22" id="NOk-fm-CYM">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="6wZ-ne-QR6" secondAttribute="trailing" id="ADk-5i-C7G"/>
-                            <constraint firstItem="6wZ-ne-QR6" firstAttribute="top" secondItem="Kh0-1o-FcH" secondAttribute="bottom" id="KQS-DZ-KCK"/>
-                            <constraint firstItem="6wZ-ne-QR6" firstAttribute="leading" secondItem="eN3-Xd-f8L" secondAttribute="leadingMargin" id="ayg-QW-7z3"/>
-                            <constraint firstItem="aha-pp-BQE" firstAttribute="top" secondItem="6wZ-ne-QR6" secondAttribute="bottom" id="vb9-4V-ZJQ"/>
-                        </constraints>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Graphs" image="second" id="fve-8Z-Ir3"/>
-                    <navigationItem key="navigationItem" title="Graphs" id="anU-dF-mSt"/>
-                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="600" height="1000"/>
+                        <sections>
+                            <tableViewSection id="pJU-N8-ZnX">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="postsByHour" rowHeight="269" id="poS-qt-5YY">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="poS-qt-5YY" id="0a0-Jp-Ony">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of posts, by hour" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zi4-Qq-CNg">
+                                                    <rect key="frame" x="8" y="8" width="196.5" height="19"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rr5-ir-UgK">
+                                                    <rect key="frame" x="8" y="242.5" width="28.5" height="13.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12pm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="07A-LY-EuR">
+                                                    <rect key="frame" x="286" y="242.5" width="29.5" height="13.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ss9-dO-GB6" customClass="HoursHistogramView" customModule="Social_Network_Analyzer" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="35" width="584" height="200"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                                    </accessibility>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="gic-3h-mes"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerX" secondItem="07A-LY-EuR" secondAttribute="centerX" id="74o-51-ilP"/>
+                                                <constraint firstAttribute="centerY" secondItem="Ss9-dO-GB6" secondAttribute="centerY" id="8Uq-OO-TBw"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Ss9-dO-GB6" secondAttribute="trailing" id="Dug-5K-NpY"/>
+                                                <constraint firstItem="Zi4-Qq-CNg" firstAttribute="leading" secondItem="0a0-Jp-Ony" secondAttribute="leadingMargin" id="I7d-NE-GJt"/>
+                                                <constraint firstItem="Zi4-Qq-CNg" firstAttribute="top" secondItem="0a0-Jp-Ony" secondAttribute="topMargin" id="M8w-Ie-i7M"/>
+                                                <constraint firstAttribute="centerX" secondItem="Ss9-dO-GB6" secondAttribute="centerX" id="MDN-ei-KAk"/>
+                                                <constraint firstItem="rr5-ir-UgK" firstAttribute="leading" secondItem="0a0-Jp-Ony" secondAttribute="leadingMargin" id="VgI-yj-1rT"/>
+                                                <constraint firstItem="07A-LY-EuR" firstAttribute="top" secondItem="Ss9-dO-GB6" secondAttribute="bottom" constant="8" symbolic="YES" id="kKg-4c-UyB"/>
+                                                <constraint firstItem="Ss9-dO-GB6" firstAttribute="top" secondItem="Zi4-Qq-CNg" secondAttribute="bottom" constant="8" symbolic="YES" id="lAb-uE-b4a"/>
+                                                <constraint firstItem="Ss9-dO-GB6" firstAttribute="leading" secondItem="0a0-Jp-Ony" secondAttribute="leadingMargin" id="tcD-pv-rJu"/>
+                                                <constraint firstItem="rr5-ir-UgK" firstAttribute="top" secondItem="Ss9-dO-GB6" secondAttribute="bottom" constant="8" symbolic="YES" id="w0z-d8-mmX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                        </accessibility>
+                                    </tableViewCell>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="postsByHour" rowHeight="269" id="U1k-T5-pJU">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="U1k-T5-pJU" id="AqM-tg-mPu">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Average likes per post, by hour of post" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGe-V5-hFG">
+                                                    <rect key="frame" x="8" y="8" width="296.5" height="19"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Exc-0v-P6G" customClass="HoursHistogramView" customModule="Social_Network_Analyzer" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="34.5" width="584" height="200"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                                    </accessibility>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="3zi-Iq-Aou"/>
+                                                    </constraints>
+                                                </view>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12am" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zfn-N2-qR8">
+                                                    <rect key="frame" x="8" y="242.5" width="28.5" height="13.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12pm" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1O8-7L-dJm">
+                                                    <rect key="frame" x="286" y="242.5" width="29.5" height="13.5"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="centerY" secondItem="Exc-0v-P6G" secondAttribute="centerY" id="1Ma-vw-A7W"/>
+                                                <constraint firstItem="Exc-0v-P6G" firstAttribute="top" secondItem="eGe-V5-hFG" secondAttribute="bottom" constant="8" symbolic="YES" id="1ad-Bz-TFi"/>
+                                                <constraint firstItem="Exc-0v-P6G" firstAttribute="leading" secondItem="AqM-tg-mPu" secondAttribute="leadingMargin" id="3fb-Pt-zz6"/>
+                                                <constraint firstItem="zfn-N2-qR8" firstAttribute="leading" secondItem="AqM-tg-mPu" secondAttribute="leadingMargin" id="3je-ut-ytT"/>
+                                                <constraint firstAttribute="centerX" secondItem="1O8-7L-dJm" secondAttribute="centerX" id="85P-dX-nlt"/>
+                                                <constraint firstAttribute="centerX" secondItem="Exc-0v-P6G" secondAttribute="centerX" id="8jQ-k4-C5f"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Exc-0v-P6G" secondAttribute="trailing" id="TqH-qz-TBh"/>
+                                                <constraint firstItem="zfn-N2-qR8" firstAttribute="top" secondItem="Exc-0v-P6G" secondAttribute="bottom" constant="8" symbolic="YES" id="XkO-tq-9qc"/>
+                                                <constraint firstItem="eGe-V5-hFG" firstAttribute="top" secondItem="AqM-tg-mPu" secondAttribute="topMargin" id="qHy-hz-T2m"/>
+                                                <constraint firstItem="1O8-7L-dJm" firstAttribute="top" secondItem="Exc-0v-P6G" secondAttribute="bottom" constant="8" symbolic="YES" id="s3A-gR-Y0p"/>
+                                                <constraint firstItem="eGe-V5-hFG" firstAttribute="leading" secondItem="AqM-tg-mPu" secondAttribute="leadingMargin" id="u1i-of-Ohd"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
+                                        </accessibility>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="ApX-4Z-ueZ" id="n0H-Kq-6NU"/>
+                            <outlet property="delegate" destination="ApX-4Z-ueZ" id="VIp-Ke-MZ0"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="K5w-ZV-GPd"/>
+                    <navigationItem key="navigationItem" title="Graphs" id="KGT-1M-CZE"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="avgLikesView" destination="CMQ-Tj-khn" id="wC2-su-rpr"/>
-                        <outlet property="postsByHourView" destination="Ss9-dO-GB6" id="xHD-Fr-Stl"/>
+                        <outlet property="avgLikesView" destination="Exc-0v-P6G" id="m36-8J-Jy5"/>
+                        <outlet property="postsByHourView" destination="Ss9-dO-GB6" id="oow-Ur-Yxa"/>
                     </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="woo-Io-L8v" sceneMemberID="firstResponder"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LAu-cF-nY3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1563" y="334"/>
+            <point key="canvasLocation" x="2251" y="189"/>
         </scene>
     </scenes>
     <resources>
         <image name="crown" width="30" height="30"/>
         <image name="graph" width="30" height="30"/>
         <image name="people" width="30" height="30"/>
-        <image name="second" width="30" height="30"/>
     </resources>
 </document>

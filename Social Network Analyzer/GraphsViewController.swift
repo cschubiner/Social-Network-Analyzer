@@ -8,10 +8,12 @@
 
 import UIKit
 
-class GraphsViewController: UIViewController {
-    @IBOutlet weak var postsByHourView: HoursHistogramView!
-    @IBOutlet weak var avgLikesView: HoursHistogramView!
+class GraphsViewController: UITableViewController {
+    //@IBOutlet weak var postsByHourView: HoursHistogramView!
+    //@IBOutlet weak var avgLikesView: HoursHistogramView!
     
+    @IBOutlet weak var avgLikesView: HoursHistogramView!
+    @IBOutlet weak var postsByHourView: HoursHistogramView!
     var fbHook: Int?
     
     override func viewDidLoad() {
@@ -40,7 +42,10 @@ class GraphsViewController: UIViewController {
         }
     }
 
-
+    override func tableView(tableView: UITableView, shouldHighlightRowAtIndexPath indexPath: NSIndexPath) -> Bool {
+        return false
+    }
+    
     /*
     // MARK: - Navigation
 
