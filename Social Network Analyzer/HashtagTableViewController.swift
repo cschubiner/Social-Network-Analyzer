@@ -26,6 +26,7 @@ class LikedHashtag {
 class HashtagTableViewController: UITableViewController {
     
     var hashtags = [String:LikedHashtag]()
+    var sortedHashtags = [String]()
     
     private struct Storyboard {
         static let CellReuseIdentifier = "hashtag"
@@ -42,25 +43,27 @@ class HashtagTableViewController: UITableViewController {
 
     
     private func findData(allPosts: [InstagramMedia]) {
-        /*for post in allPosts {
+        for post in allPosts {
             for hashtag in post.tags {
-                if let statsHashtag = hashtags[hashtag] {
-                    statsHashtag.totalPosts += 1
-                    hashtags[hashtag]
-                } else {
-                    
+                if let hashtagString = hashtag as? String {
+                    if let statsHashtag = self.hashtags[hashtagString] {
+                        statsHashtag.totalPosts += 1
+                        statsHashtag.numTotalLikes += post.likesCount
+                        hashtags[hashtagString] = statsHashtag
+                    } else {
+                        hashtags[hashtagString] = LikedHashtag(hashtag: hashtagString, likes: post.likesCount)
+                    }
                 }
             }
-        }*/
-        /*topIGPosts = [InstagramMedia]()
-        var sortedPosts = allPosts
-        sortedPosts.sort { $1.likesCount < $0.likesCount }
-        if sortedPosts.count < NUM_TOP_POSTS {
-            topIGPosts = sortedPosts
-        } else {
-            topIGPosts = Array(sortedPosts[0...NUM_TOP_POSTS])
         }
-        self.tableView.reloadData()*/
+        sortedHashtags = Array(hashtags.keys)
+        sortedHashtags.sort {
+            var stats1 = self.hashtags[$0]
+            var stats2 = self.hashtags[$1]
+            return stats1!.avgLikes > stats2!.avgLikes
+        }
+    
+        self.tableView.reloadData()
     }
     
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -75,7 +78,7 @@ class HashtagTableViewController: UITableViewController {
     {
         let cell = tableView.dequeueReusableCellWithIdentifier(Storyboard.CellReuseIdentifier, forIndexPath: indexPath) as HashtagTableViewCell
         
-        cell.data = LikedHashtag(hashtag: "hello", likes: 10)
+        cell.data = hashtags[sortedHashtags[indexPath.row]]
         
         return cell
     }

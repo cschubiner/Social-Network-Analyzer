@@ -10,6 +10,9 @@ import UIKit
 
 class HashtagTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var hashtagLabel: UILabel!
+    @IBOutlet weak var numLikesLabel: UILabel!
+    
     var data : LikedHashtag? {
         didSet {
             updateUI()
@@ -18,9 +21,12 @@ class HashtagTableViewCell: UITableViewCell {
     
     func updateUI() {
         // reset existing data
-        
+        hashtagLabel.text = nil
+        numLikesLabel.text = nil
         
         if let data = self.data {
+            hashtagLabel.text = "#" + data.hashtag
+            numLikesLabel.text = String(data.avgLikes)
         }
     }
     
