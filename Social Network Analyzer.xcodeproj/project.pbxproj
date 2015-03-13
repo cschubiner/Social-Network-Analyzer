@@ -35,6 +35,9 @@
 		0CB54BD31AAC4CEC00436D2F /* PeopleTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB54BD21AAC4CEC00436D2F /* PeopleTableViewController.swift */; };
 		192753F71AAC49B40068F233 /* TopPostsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192753F61AAC49B40068F233 /* TopPostsTableViewCell.swift */; };
 		192753F91AAC49CD0068F233 /* TopPostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192753F81AAC49CD0068F233 /* TopPostsViewController.swift */; };
+		192754151AB282010068F233 /* HashtagTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192754141AB282010068F233 /* HashtagTableViewController.swift */; };
+		192754171AB283250068F233 /* HashtagTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192754161AB283250068F233 /* HashtagTableViewCell.swift */; };
+		198267C91AB2903100A2C3B0 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A110091AB27F9700161F6E /* FacebookSDK.framework */; };
 		E905C1CE1AAC344900160A1E /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905C1CD1AAC344900160A1E /* LoadingViewController.swift */; };
 		E905C1D01AAC408500160A1E /* GraphsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905C1CF1AAC408500160A1E /* GraphsViewController.swift */; };
 		E905C1D41AAC438000160A1E /* HoursHistogramView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E905C1D31AAC438000160A1E /* HoursHistogramView.swift */; };
@@ -45,7 +48,6 @@
 		E975FE281AAC31F400C74B14 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E975FE271AAC31F400C74B14 /* Images.xcassets */; };
 		E975FE2B1AAC31F400C74B14 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E975FE291AAC31F400C74B14 /* LaunchScreen.xib */; };
 		E975FE371AAC31F400C74B14 /* Social_Network_AnalyzerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E975FE361AAC31F400C74B14 /* Social_Network_AnalyzerTests.swift */; };
-		E9A1100A1AB27F9700161F6E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9A110091AB27F9700161F6E /* FacebookSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -112,6 +114,8 @@
 		0CB54BD21AAC4CEC00436D2F /* PeopleTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PeopleTableViewController.swift; sourceTree = "<group>"; };
 		192753F61AAC49B40068F233 /* TopPostsTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopPostsTableViewCell.swift; sourceTree = "<group>"; };
 		192753F81AAC49CD0068F233 /* TopPostsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TopPostsViewController.swift; sourceTree = "<group>"; };
+		192754141AB282010068F233 /* HashtagTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagTableViewController.swift; sourceTree = "<group>"; };
+		192754161AB283250068F233 /* HashtagTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HashtagTableViewCell.swift; sourceTree = "<group>"; };
 		E905C1CD1AAC344900160A1E /* LoadingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
 		E905C1CF1AAC408500160A1E /* GraphsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GraphsViewController.swift; sourceTree = "<group>"; };
 		E905C1D31AAC438000160A1E /* HoursHistogramView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HoursHistogramView.swift; sourceTree = "<group>"; };
@@ -135,7 +139,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E9A1100A1AB27F9700161F6E /* FacebookSDK.framework in Frameworks */,
+				198267C91AB2903100A2C3B0 /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +295,8 @@
 				0CAA20371AAC69D800BDB395 /* InstagramHelper.swift */,
 				E905C1D71AAC4AF100160A1E /* FbHelper.swift */,
 				E905C1DB1AAC4E1D00160A1E /* FbPost.swift */,
+				192754141AB282010068F233 /* HashtagTableViewController.swift */,
+				192754161AB283250068F233 /* HashtagTableViewCell.swift */,
 			);
 			path = "Social Network Analyzer";
 			sourceTree = "<group>";
@@ -429,6 +435,7 @@
 				0CB54BD31AAC4CEC00436D2F /* PeopleTableViewController.swift in Sources */,
 				0CB54BB41AAC43B000436D2F /* AFURLResponseSerialization.m in Sources */,
 				0CB54BC21AAC43C900436D2F /* IKLoginViewController.m in Sources */,
+				192754151AB282010068F233 /* HashtagTableViewController.swift in Sources */,
 				0CB54BBA1AAC43B000436D2F /* InstagramComment.m in Sources */,
 				0CB54BB21AAC43B000436D2F /* AFURLConnectionOperation.m in Sources */,
 				E905C1DC1AAC4E1D00160A1E /* FbPost.swift in Sources */,
@@ -445,6 +452,7 @@
 				0CB54BB31AAC43B000436D2F /* AFURLRequestSerialization.m in Sources */,
 				0CB54BBC1AAC43B000436D2F /* InstagramModel.m in Sources */,
 				0CB54BB91AAC43B000436D2F /* IKUserInPhoto.m in Sources */,
+				192754171AB283250068F233 /* HashtagTableViewCell.swift in Sources */,
 				0CB54BBF1AAC43B000436D2F /* InstagramUser.m in Sources */,
 				0CB54BB51AAC43B000436D2F /* AFURLSessionManager.m in Sources */,
 				0CB54BBD1AAC43B000436D2F /* InstagramPaginationInfo.m in Sources */,
@@ -626,6 +634,12 @@
 					"$(PROJECT_DIR)/Social",
 					Network,
 					Analyzer,
+					"$(PROJECT_DIR)/Social",
+					Network,
+					Analyzer,
+					"$(PROJECT_DIR)/Social",
+					Network,
+					Analyzer,
 				);
 				INFOPLIST_FILE = "Social Network Analyzer/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -642,6 +656,12 @@
 				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
+					"$(PROJECT_DIR)/Social",
+					Network,
+					Analyzer,
+					"$(PROJECT_DIR)/Social",
+					Network,
+					Analyzer,
 					"$(PROJECT_DIR)/Social",
 					Network,
 					Analyzer,

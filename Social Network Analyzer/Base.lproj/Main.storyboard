@@ -126,7 +126,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xo4-9E-nxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1709" y="-1002"/>
+            <point key="canvasLocation" x="2521" y="-1002"/>
         </scene>
         <!--Biggest Fans-->
         <scene sceneID="xaL-n8-WQv">
@@ -238,6 +238,53 @@
             </objects>
             <point key="canvasLocation" x="-835" y="847"/>
         </scene>
+        <!--Average Likes per Hashtag-->
+        <scene sceneID="9Vj-Rn-lFI">
+            <objects>
+                <tableViewController id="Sek-yf-7s8" customClass="HashtagTableViewController" customModule="Social_Network_Analyzer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="nNg-NY-ggW">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="hashtag" id="kHR-su-Qjt" customClass="HashtagTableViewCell" customModule="Social_Network_Analyzer" customModuleProvider="target">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kHR-su-Qjt" id="Ye9-j3-hI4">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="#hashtag" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IC4-y4-bK9">
+                                            <rect key="frame" x="8" y="11" width="67" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="17" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAa-xR-CJF">
+                                            <rect key="frame" x="569" y="11" width="23" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="LAa-xR-CJF" firstAttribute="trailing" secondItem="Ye9-j3-hI4" secondAttribute="trailingMargin" id="cTl-Bh-2lr"/>
+                                        <constraint firstAttribute="centerY" secondItem="LAa-xR-CJF" secondAttribute="centerY" constant="0.5" id="f5b-3D-Zm4"/>
+                                        <constraint firstItem="IC4-y4-bK9" firstAttribute="leading" secondItem="Ye9-j3-hI4" secondAttribute="leadingMargin" id="itY-0c-MiL"/>
+                                        <constraint firstAttribute="centerY" secondItem="IC4-y4-bK9" secondAttribute="centerY" constant="0.5" id="uUq-q7-OXE"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="Sek-yf-7s8" id="ep3-ae-Kft"/>
+                            <outlet property="delegate" destination="Sek-yf-7s8" id="6hR-Nw-d0E"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Average Likes per Hashtag" id="7et-Li-Nqm"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Kb1-UG-fz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13" y="-1540"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -251,6 +298,7 @@
                     <connections>
                         <segue destination="VoV-sw-ovA" kind="relationship" relationship="viewControllers" id="AA3-yK-auz"/>
                         <segue destination="S2j-xL-DrX" kind="relationship" relationship="viewControllers" id="Qyf-E5-Hqo"/>
+                        <segue destination="lEq-iJ-PRh" kind="relationship" relationship="viewControllers" id="31h-T2-kkq"/>
                         <segue destination="GMY-Nx-Zdd" kind="relationship" relationship="viewControllers" id="EgS-iE-F8Y"/>
                     </connections>
                 </tabBarController>
@@ -275,7 +323,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N3G-D2-rCq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="-1002"/>
+            <point key="canvasLocation" x="1562" y="-1002"/>
         </scene>
         <!--People-->
         <scene sceneID="IYP-uw-ufI">
@@ -311,7 +359,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K4k-wv-4wQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="740" y="54"/>
+            <point key="canvasLocation" x="975" y="154"/>
         </scene>
         <!--Item-->
         <scene sceneID="2Mn-H6-7Vv">
@@ -464,10 +512,30 @@
             </objects>
             <point key="canvasLocation" x="2251" y="189"/>
         </scene>
+        <!--Hashtags-->
+        <scene sceneID="eWA-2x-6h8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lEq-iJ-PRh" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Hashtags" image="hashtag" id="yba-dJ-hyE"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="z6U-tK-hOV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Sek-yf-7s8" kind="relationship" relationship="rootViewController" id="kgB-2a-dQO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9XR-yD-PoO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="13" y="-823"/>
+        </scene>
     </scenes>
     <resources>
         <image name="crown" width="30" height="30"/>
         <image name="graph" width="30" height="30"/>
+        <image name="hashtag" width="30" height="30"/>
         <image name="people" width="30" height="30"/>
     </resources>
 </document>
