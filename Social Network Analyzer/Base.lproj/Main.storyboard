@@ -238,7 +238,7 @@
             </objects>
             <point key="canvasLocation" x="-835" y="847"/>
         </scene>
-        <!--Average Likes per Hashtag-->
+        <!--Average Likes Per Hashtag-->
         <scene sceneID="9Vj-Rn-lFI">
             <objects>
                 <tableViewController id="Sek-yf-7s8" customClass="HashtagTableViewController" customModule="Social_Network_Analyzer" customModuleProvider="target" sceneMemberID="viewController">
@@ -283,7 +283,7 @@
                             <outlet property="delegate" destination="Sek-yf-7s8" id="6hR-Nw-d0E"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Average Likes per Hashtag" id="7et-Li-Nqm"/>
+                    <navigationItem key="navigationItem" title="Average Likes Per Hashtag" id="7et-Li-Nqm"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kb1-UG-fz8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
